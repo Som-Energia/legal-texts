@@ -1,0 +1,139 @@
+### **1.** **DEFINIZIOAK**
+
+1.1. Dokumentu honetan letra larriz jasotzen diren termino guztiak bertan definitzen diren moduan interpretatuko dira eta, definituta egon ezean, Kontratugileak eta SOM ENERGIA, SCCLk sinatutako energia elektrikoko Hornidura Kontratuaren Baldintza Orokorretan definitzen diren moduan interpretatuko dira.
+
+### **2.** **XEDEA**
+
+2.1. Kontratugileak tarifa indexatua kontratatzea eskatu du.
+Eta, horretarako, oinarrizko betekizuna da Hornidura Kontratua aurretik edo aldi berean kontratatzea.
+
+2.2. Tarifa Indexatua merkatu libreko tarifa indexatu bat da, orduko prezioak dituena.
+Tarifa indexatua baldintza espezifiko hauen 5. klausulan zehaztutako formula erabiliz kalkulatzen da.
+Prezio aldakorra du, prezioa energiaren handizkako merkatuan (OMIE) egunero gertatzen diren aldaketen mende dagoelako.
+OMIEk 24 prezio desberdin ezartzen ditu egunean zehar, bat orduko.
+Kanarietako eta Balearretako kontratuen prezioa aldakorra da ere, eta uharteko sistema elektriko bakoitzerako Red Eléctricak karga abiarazteko ezarri duen prezioaren mende dago.
+
+2.3. Tarifa Indexatuaren baldintza espezifiko hauen (aurrerantzean, “**Baldintza Espezifikoak**” edo “**Tarifa Indexatuaren Baldintza Espezifikoak**”) xedea da, Tarifa Indexatuaren kontratazioaren ondorioz, Hornidura Kontratuaren Baldintza Orokorrak egokitzea.
+Tarifa Indexatuaren Baldintza Espezifiko hauek Hornidura Kontratuaren Baldintza Orokorretatik banaezinak dira, eta haien edukiak lehentasuna izango du Hornidura Kontratuaren Baldintza Orokorrek xedatzen dutenaren aurrean.
+
+### 3. INDARREAN SARTZEA ETA INDARRALDIA
+
+3.1. Baldintza Espezifiko hauek indarrean sartuko dira bertan ezarritako datan, baina haiek indarrean egotea Hornidura Kontratua indarrean egotearen mende dago.
+
+3.2. Tarifa Indexatua SOM ENERGIA, SCCLrekin Hornidura Kontratua formalizatzen den aldi berean kontratatzen bada, Hornidura Kontratuaren eta Baldintza Espezifiko hauen indarraldia Hornidura Kontratuaren Baldintza Orokorretako 3.3. eta 3.4. klausuletan xedatutakoaren mende egongo da.
+Hortaz, enpresa banatzaileak (Kontratugilea haren sarera konektatuko da) hornidura-puntuaren altari edo Hornidura Kontratua eta Baldintza Espezifiko hauek gauzatzeko sarerako sarbide-kontratuan egin beharreko aldaketei uko egiten badie, biak automatikoki baliogabetuko dira, kalte-ordaina jasotzeko eskubiderik sortu gabe.
+
+3.3. Era berean, Hornidura Kontratua edozein arrazoi dela bide baliogabetzen bada, Baldintza Espezifiko hauek automatikoki baliogabetuko dira, indarreko hornidura-kontratu bat izatea funtsezko betekizuna baita Tarifa Indexatua kontratatu ahal izateko.
+
+3.4. Hornidura Kontratuaren iraupena (Hornidura Kontratuaren Baldintza Orokorretako 3.3. klausulan xedatzen da) aldatu egiten da Tarifa Indexatua kontratatzean, halako moduz, non urte bateko (1) aldia Baldintza Espezifiko hauen datatik zenbatzen hasiko baita, edo, Hornidura Kontratuaz gain beste produktu osagarriren bat kontratatuz gero, data berantiarrenetik.
+
+### 4. TARIFA INDEXATUAREN HASIERA- ETA AMAIERA-DATA
+
+4.1. Kontratugileak Tarifa Indexatua tarifa-aldaketa bidez kontratatzen badu eta aurrez Hornidura Kontratu bat badu SOM ENERGIA, SCCLrekin, goiko klausulan indarrean sartzeari eta indarraldiari buruz xedatutakoa eragotzi gabe, alderdiek adosten dute kontratatutako Tarifa Indexatua Baldintza Espezifiko hauen dataren hurrengo fakturazio-zikloaren lehen egunetik aurrera aplikatzen hastea.
+Baldintza Espezifiko hauek sinatzeko unean aribidean dagoen fakturazio-zikloan zehar kontsumitutako energia Tarifa Indexatua kontratatu aurretik aplikatzen zen tarifaren arabera fakturatuko da.
+
+4.2. Tarifa Indexatua Hornidura Kontratua Som Energia, SCCLrekin formalizatzen den aldi berean kontratatzen bada, Tarifa Indexatua Baldintza Espezifiko hauetako 3. klausulan ezarritako baldintzak betetzen direnean hasiko da aplikatzen.
+
+4.3. Behin Tarifa Indexatua aplikatzen hasita, Kontratugileak tarifa aldatzen badu eta SOM ENERGIA, SCCLk indarrean eta eskuragarri dituen tarifetako bat kontratatzen badu, Tarifa Indexatua tarifa berria kontratatzeko unean aribidean dagoen fakturazio-zikloaren azken egunera arte aplikatuko da.
+
+### 5. KLAUSULAREN (“PREZIOA ETA EGUNERATZEA”) EGOKITZAPENA
+
+5.1. Alderdiek adosten dute Hornidura Kontratuaren Baldintza Orokorretako 5.6. klausula gehitzea, zeina honela idatzita geratuko baita:
+
+Tarifa Indexatua kontratatu badu, Kontratugileak, kontratatutako horniduraren kontraprestazio moduan, behean zehaztutako prezioa eta gainerako kontzeptuak ordainduko ditu, eta baita une bakoitzean indarrean dagoen tasari aplikagarri zaizkion zergak eta legez galda daitezkeen ondare-prestazioak edota beste guztiak ere.
+Halaber, Kontratugileak kontratazio-formularioan, edo gero Bulego Birtualaren bidez, hala eskatzen badu, goiko kopuruari Kooperatibaren garapenari laguntzeko borondatezko dohainaren zenbatekoa gehituko zaio.
+
+Energiaren zenbatekoa orduko batura da, eta orduero sartzen den energia aktiboaren kontsumoa energiaren orduko prezioaz biderkatuz kalkulatzen da.
+
+**Energia-terminoaren zenbatekoa = Orduko batura (sartzen den energia aktiboa, kWh *h_(i)* \* PH)**
+
+Non ***h_(i)***fakturazio-aldiko orduetako bakoitza baita,
+
+eta PH energiaren orduko prezioa, honako formula honi jarraituz kalkulatuta:
+
+**PH = 1,015 \* \[(PHM + Pc + Sc + Dsv + GdO + POsOm) (1 + Perd) + FE + F\] + PTD + CA**
+
+Non:
+
+- **PH** = Energiaren orduko prezioa.
+
+- **PHM** = Eguneko merkatuko orduko prezioa.
+Penintsulako kontratuentzat Energiaren merkatu iberiarreko operadoreak (OMIEk) argitaratutako prezioa da; Balearretako eta Kanarietako kontratuentzat, berriz, uharteko sistema elektrikoko eskariaren prezioa da.
+
+> Penintsula: [*https://www.omie.es/es/spot-hoy*](https://www.omie.es/es/spot-hoy)
+
+- **Pc** = Urtero Ministerioak argitaratzen dituen kapazitateagatiko ordainketak, Kontratugileak kontratatzen duen eta Kontratugileak kontsumitzen duen energiari aplikatzen zaion sarbide-bidesariaren arabera.
+
+- **Sc** = Red Eléctrica de Españak (REEk) sarearen kudeaketarako argitaratzen dituen eguneko gainkostuak, faktura sortzeko unean argitaratutako balioaren arabera.
+
+- **Dsv** = Programatutako energiaren eta azkenean erabilitako energiaren arteko desbideraketengatik ezarritako zigorraren kostua.
+Dsv kostua kalkulatzeko, REEk BS3, RAD3rako argitaratutako balioak eta gorako zein beherako desbideraketen kostuen batezbestekoa batu egingo dira, eta SOM ENERGIA, SCCLren desbideraketa-faktore propioaz biderkatuko dira.
+Faktore hori (Desbideraketa-faktorea) SOM ENERGIA, SCCLren webgunean argitaratuko da eta hiru hilez behin eguneratuko da.
+Balearretan eta Kanarietan, Dsv kostua kalkulatzeko REEk argitaratutako prezioa zuzenean Desbideraketa-faktoreaz biderkatuko da.
+
+> Dsv = \[1/2 (CoDsvSu + CoDsvBa) + BS3 + RAD3\] x Desbideraketa-faktorea
+>
+> Dsv = scdsvdem x Desbideraketa-faktorea
+
+- **GdO** = Elektrizitatearen jatorri berriztagarriaren berme-ziurtagiriak eskuratzeko kostua.
+Kostua SOM ENERGIA, SCCLren instalazioek sortutako energiaren eta jatorri berriztagarriaren berme-ziurtagiriak eskuratzeko kostuaren araberakoa izango da.
+Ez denez kostu arautu bat, ziurtagirien hornitzaileekin adostutako baldintzen mende dago.
+Kostua hiru hilez behin eguneratuko da eta SOM ENERGIA, SCCLren webgunean argitaratuko da.
+
+- **POsOm** = REE sistema-operadorearen eta OMIE merkatu-operadorearen kostua.
+Merkatu eta Lehiakortasun Batzorde Nazionalak (MLBN) ezarritako kostu arautu bat da.
+OMIEren kostua ez zaie aplikatzen uharteko sistema elektrikoko kontratuei (Kanariak eta Balearrak).
+
+- **Perd** = Sistemaren galera arautuen koefizienteak, sorkuntza-puntutik kontsumo-puntura, REEk faktura sortzeko unean argitaratzen duen balioaren arabera.
+
+- **FE** = Azken kostua, Energia-efizientziarako fondo nazionalera (FNEE) ekarpena egiteko beharraren inguruko indarreko araudiaren arabera.
+
+- **F** = Kooperatibarentzako tartea (Kooperatibaren bideragarritasuna bermatzeko marjina barne hartzen du).
+
+- **PTD** = MLBNk ezarritako eta argitaratutako garraio- eta banaketa-bidesariaren kostu arautua, kontsumitutako energia guztiaren gainean aplikatuta.
+
+- **CA** = Dagokion Ministerioak ezarritako sistema elektrikoko karguen kostu arautua, kontsumitutako energia guztiaren gainean aplikatuta.
+
+#### Energia erreaktiboaren terminoa
+
+SOM ENERGIA, SCCLk gehiegizko energia erreaktiboa fakturatzeko moduaren inguruan indarreko legeriak xedatzen duena aplikatuko du fakturazioan.
+Gehiegizko energia erreaktiboa Kontratugilearen kontura izango da, eta instalazioan sortutako energia erreaktiboaren ehunekoaren arabera kalkulatuko da, ordutegi-tarte bakoitzean, energia aktiboaren kontsumoarekin alderatuta.
+
+#### Potentzia-gehiegikeriak
+
+SOM ENERGIA, SCCLk sarbide-tarifaren potentzia-gehiegikeriak fakturatzeko moduaren inguruan indarreko legeriak xedatzen duena aplikatuko du fakturazioan.
+Potentzia-gehiegikeriak Kontratugilearen kontura izango dira, kontratatutako potentziaren eta azkenean erabilitako potentziaren arteko diferentziaren neurrian.
+
+#### Konpentsazio sinplifikatua
+
+Konpentsazio sinplifikatua jasotzeko aukera dagoenean, merkaturatzaileak konpentsazio hori fakturetan jaso behar du, enpresa banatzaileak emandako informazioaren arabera, 244/2019 Errege Dekretuak eta autokontsumo-modalitate horri aplikatzekoa den araudiak xedatutakoari jarraituz.
+Zehazki, merkaturatzaileak saretik kontsumitutako energia hilabete 1eko fakturazio-alditan fakturatu behar du, irakurketen eta banatzaileak bidalitako informazio osagarriaren arabera, 244/2019 Errege Dekretuko 13. eta 14. artikuluei jarraituz.
+Horretarako, behean adostutako konpentsazio-prezioa aplikatuko du.
+
+Soberakinen zenbatekoa orduko batura da, eta orduero irteten den energia aktiboa (soberakinak) soberakinak konpentsatzeko orduko prezioaz biderkatuz kalkulatzen da.
+
+**Soberakinen konpentsazio-zenbatekoa = ORDUKO BATURA (soberazko kWh hi x PHC hi)**
+
+Eta *h_(i)* balioak fakturazio-aldiko orduetako bakoitza irudikatzen du.
+
+Non, PHC balioak soberakinak konpentsatzeko orduko prezioa irudikatzen baitu.
+Penintsulako kontratuentzat OMIEk argitaratutako prezioa da; Balearretako eta Kanarietako kontratuentzat, berriz, hau da: uharteko sistema elektrikoko (balearra eta kanariarra, hurrenez hurren) eskariaren orduko prezioa ken sistemaren operazioko doikuntza-zerbitzuen kostuengatik uharteko soberakinek ordaindu behar duten prezioa.
+
+Penintsulako PHC = OMIE prezioa
+
+Uharteetako PHC = SphDem-SphAuto.
+
+Araudiak xedatzen duen legez, konpentsazioaren gehieneko balioa energia-terminoaren balioa izango da.
+Merkatu libreko merkaturatzaile gisa, bidesariei eta karguei dagokien energiaren kostuaren zati arautuaren konpentsazioa ere ezarri dugu.
+Soberazko energiaren balio ekonomikoa erabilitako energiarena edo hortik gorakoa bada, fakturan, energia-terminoaren zenbatekoa 0 euro izango da.
+
+### 6. FAKTURAZIOA 
+
+6.1. Alderdiek adosten dute Hornidura Kontratuaren Baldintza Orokorretako 7.2. bis klausula gehitzea, zeina honela idatzita geratuko baita:
+
+7.2. klausulan xedatutako eragotzi gabe, Tarifa Indexatua aplikatzeko orduko kontsumoak irakurketa egiteaz arduratzen den pertsonak aurkeztutako ordutegi-kurbak oinarri hartuta kalkulatuko dira.
+SOM ENERGIA, SCCLk ezin badu fakturatu ordutegi-kurbak oinarri hartuta, irakurketa egiteaz arduratzen den pertsonak jakinarazitako edo Hornidura Kontratuaren Baldintza Orokorretako 7.2. klausulan aurreikusitako moduren batean eskuratutako kontsumoei sistema-operadoreak argitaratutako koefiziente perfilatuak aplikatuko dizkie, banatzailearen sarerako sarbide-bidesari mota bakoitzarentzat indarrean dagoen araudiak xedatutakoarekin bat etorriaz.
+6.1TD banaketa-sarerako sarbide-bidesaria duten hornidura-puntuen kasuan, 3.0TD sarbide-bidesariarentzat araudiak ezartzen dituen koefiziente perfilatuak aplikatuko dira.
+
+SOM ENERGIA, SCCLk Baldintza Espezifiko hauek bere webgunearen ([*www.somenergia.coop*](https://www.somenergia.coop/eu/)) bitartez Kontratugilearen eskura jarri ditu kontratazioa gauzatu aurretik.
+Baldintza Espezifiko hauek kontratazio elektronikoko sistema baten bidez sinatu dira eta, kontratazioa burutzean, Kontratugileari euskarri iraunkorreko ale bat helarazi zaio.

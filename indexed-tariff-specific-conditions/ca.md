@@ -1,0 +1,138 @@
+# CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+
+### 1. DEFINICIONS
+
+**1.1.** Tots els termes en majúscules inclosos en el present document seran interpretats com s'hi defineixen, i, en absència de definició, tal com estan definits en les Condicions Generals del Contracte de Subministrament d'energia elèctrica subscrit entre la contractant i SOM ENERGIA, SCCL.
+ 
+
+### 2. OBJECTE
+
+**2.1.** La contractant ha sol·licitat contractar la tarifa indexada, per a la qual cosa és un requisit essencial formalitzar la contractació prèvia o simultània del Contracte de Subministrament.
+
+**2.2.** La tarifa indexada és una tarifa del mercat lliure amb preus horaris, calculada d'acord amb la fórmula indicada en la clàusula 5 de les presents condicions específiques.
+El seu preu és variable i depèn dels canvis que es produeixen diàriament en el mercat majorista de l'energia (OMIE), que fixa 24 preus diferents al llarg del dia, un per cada hora.
+En el cas de contractes situats a Canàries i Balears, el preu també és variable i depèn del preu del despatx de càrrega de *Red Eléctrica* fixat per a cadascun dels sistemes elèctrics insulars.
+
+**2.3.** L'objecte d'aquestes Condicions específiques de la Tarifa Indexada (d'ara endavant “**Condicions Específiques**” o “**Condicions Específiques de la Tarifa Indexada**”) és adaptar les Condicions Generals del Contracte de Subministrament a conseqüència de la contractació de la tarifa indexada.
+Així, les presents Condicions Específiques de la Tarifa Indexada s'integren i formen part inseparable de les Condicions Generals del Contracte de Subministrament, i el seu contingut prevaldrà sobretot el que recullen les Condicions Generals del Contracte de Subministrament.
+
+### 3. ENTRADA EN VIGOR I VIGÈNCIA
+
+3.1. Aquestes Condicions Específiques estaran en vigor des de la data que hi consta, si bé la seva vigència està condicionada a la vigència del Contracte del Subministrament.
+
+3.2. Si la contractació de la Tarifa Indexada és simultània a la formalització del contracte de subministrament amb SOM ENERGIA, SCCL, la vigència d’aquest contracte i d'aquestes Condicions Específiques estaran subjectes al que preveuen les clàusules 3.3 i 3.4 de les Condicions Generals del Contracte de Subministrament, de manera que si la companyia distribuïdora, propietària de la xarxa a la qual es connecta la contractant, denegués l'alta del punt de subministrament o els canvis en el contracte d'accés a xarxa necessaris per fer efectiu el Contracte de Subministrament i aquestes Condicions Específiques, es consideraran tots dos resolts automàticament sense dret a cap indemnització.
+
+3.3. Igualment, la resolució per qualsevol causa del Contracte de Subministrament comportarà automàticament la resolució d'aquestes Condicions Específiques, perquè l'existència d'un contracte de subministrament en vigor és requisit essencial per poder contractar la Tarifa Indexada.
+
+3.4. La durada del Contracte de Subministrament establerta a la clàusula 3.3 de les Condicions Generals del Contracte de Subministrament queda modificada amb la contractació de la Tarifa Indexada, de manera que el còmput del període d'un (1) any s'iniciarà en la data d'aquestes Condicions Específiques, o la més tardana de les seves dates en cas de contractar-se més d'un producte addicional al Contracte de Subministrament.
+ 
+
+### 4. DATA D'INICI I FINALITZACIÓ DE LA TARIFA INDEXADA
+
+4.1. Si la part contractant està contractant la Tarifa Indexada, mitjançant una modificació de tarifa, i disposa prèviament d'un Contracte de Subministrament amb SOM ENERGIA, SCCL, sense perjudici del que s'estableix en la clàusula anterior sobre l'entrada en vigor i vigència, les parts acorden que la Tarifa Indexada contractada comenci a aplicar-se a partir del primer dia del cicle de facturació següent a la data d'aquestes condicions específiques.
+L'energia consumida durant el cicle de facturació en curs en el moment de la signatura d'aquestes Condicions Específiques serà facturada amb la tarifa que s'aplicava abans contractar la Tarifa Indexada.
+
+4.2. Si la contractació de la Tarifa Indexada és simultània a la formalització del contracte de subministrament amb SOM ENERGIA, SCCL, la Tarifa Indexada començarà a aplicar-se després de complir-se les condicions establertes en la clàusula 3 d'aquestes condicions específiques.
+
+4.3. Si, una vegada iniciada l'aplicació de la Tarifa Indexada, la contractant efectua un canvi de tarifa a qualsevol de les tarifes vigents i disponibles de SOM ENERGIA, SCCL, s'aplicarà la Tarifa Indexada fins a l'últim dia del cicle de facturació en curs en el moment de contractació de la nova tarifa.
+
+### 5. ADAPTACIÓ DE LA CLÀUSULA 5 “PREU I ACTUALITZACIÓ”
+
+5.1. Les parts acorden afegir la clàusula 5.6 de les Condicions Generals del Contracte de Subministrament, que queda redactada de la manera següent:
+
+En cas d'haver contractat la Tarifa Indexada, la contractant ha d'abonar en contraprestació al subministrament contractat el preu i altres conceptes descrits a continuació, així com els impostos aplicables al tipus vigent a cada moment i totes aquelles prestacions patrimonials i/o altres legalment exigibles.
+Així mateix, si la contractant ho sol·licita al formulari de contractació, o posteriorment a través de l’Oficina Virtual, s'ha d’afegir a l’import anterior el que correspon al donatiu voluntari per ajudar al desenvolupament de la cooperativa.
+
+L'import de l'energia és el resultat de la suma horària del producte entre el consum d'energia activa entrant a cada hora i el preu horari de l'energia.
+
+**Import del terme energia = Suma horària (kWh Energia Activa entrant *h_(i)* \* PH)**
+
+Sent ***h_(i)***cada una de les hores del període de facturació en qüestió.
+
+Sent PH el preu horari de l'energia calculat seguint la fórmula següent:
+
+**PH = 1,015 \* \[(PHM + Pc + Sc + Dsv + GdO + P_(OsOm)) (1 + Perd) + FE + F\] + PTD + CA**
+
+On:
+
+- **PH** = preu horari de l'energia.
+
+- **PHM** = preu horari del mercat diari.
+Per als contractes de la península és el preu publicat per l'Operador del Mercat Ibèric de l'Energia (OMIE), mentre que per a les illes Balears i Canàries és el preu de la demanda del Sistema Elèctric Insular.
+
+> Península: [*https://www.omie.es/es/spot-hoy*](https://www.omie.es/es/spot-hoy)
+
+- **Pc** = pagaments per capacitat publicats pel Ministeri anualment, en funció del peatge d'accés contractat per la Contractant i aplicat a l'energia consumida per la Contractant.
+
+- **Sc** = sobrecostos diaris publicats per Red Eléctrica Española (REE) per a la gestió de la xarxa, segons el valor publicat en el moment de generar la factura.
+
+- **Dsv** = cost de la penalització per desviaments entre energia programada i energia finalment utilitzada.
+El cost del Dsv s'obté de la suma dels valors publicats per REE per a BS3, RAD3 i la mitjana dels costos del desviament a pujar i baixar multiplicat per un factor de desviament propi de SOM ENERGIA, SCCL, que s'actualitza trimestralment i es publica al web de SOM ENERGIA, SCCL (factor desviament).
+En cas de les Balears i Canàries, el Dsv s'obté directament del preu publicat per REE multiplicat pel factor desviament
+
+> Dsv = \[1/2 (CoDsvSu + CoDsvBa) + BS3 + RAD3\] x factor desviament
+>
+> Dsv = scdsvdem x factor desviament
+
+- **GdO** = cost d'adquisició dels certificats de Garantia d'Origen Renovable de l'electricitat.
+Aquest cost depèn de l'energia produïda per les plantes de SOM ENERGIA, SCCL, i del cost d'adquisició dels certificats de Garantia d'Origen Renovable.
+Com que no es tracta d'un cost regulat, depèn de les condicions acordades amb els proveïdors de certificats.
+Aquest cost s'actualitza trimestralment i es publica al web de SOM ENERGIA, SCCL.
+
+- **P_(OsOm)** = cost de l'operador del sistema (REE) i de l'operador de mercat (OMIE).
+Es tracta d'un cost regulat establert per la Comissió Nacional dels Mercats i la Competència (CNMC).
+El cost d'OMIE no s'aplica als contractes del sistema elèctric insular (Canàries, Balears).
+
+- **Perd** = coeficients de pèrdues regulades de sistema des del punt de generació al punt de consum, segons el valor publicat per REE en el moment de generar la factura.
+
+- **FE** = cost resultant segons normativa en vigor relativa a l'obligació d'aportació al Fons Nacional d'Eficiència Energètica (FNEE).
+
+- **F** = franja de la cooperativa (inclou el marge per a la viabilitat de la cooperativa).
+
+- **PTD** = cost regulat del peatge de transport i distribució establert i publicat per la CNMC i aplicat sobre el total de l'energia consumida.
+
+- **CA** = cost regulat dels càrrecs del sistema elèctric definits pel Ministeri corresponent, aplicat sobre el total de l'energia consumida.
+
+#### **Terme d'energia reactiva**
+
+SOM ENERGIA, SCCL, aplicarà a la facturació el que indica la legislació vigent en relació amb la manera de facturar els excessos d'energia reactiva.
+Aquests són a càrrec de la contractant i es calculen segons el percentatge d'energia reactiva generada en la instal·lació respecte del consum d'energia activa, a cada un dels períodes horaris.
+
+#### **Excessos de potència**
+
+SOM ENERGIA, SCCL, aplicarà a la facturació el que indica la legislació vigent en relació amb la manera de facturar els excessos de potència de la tarifa d'accés, que són a càrrec de la contractant per la diferència entre la potència contractada i la finalment utilitzada.
+
+#### **Compensació simplificada**
+
+En cas d'estar acollit al mecanisme de compensació simplificada, la comercialitzadora ha de reflectir en les factures aquesta compensació, d'acord amb la informació facilitada per la companyia distribuïdora, d'acord amb el que estableix el Reial decret 244/2019 i altra normativa aplicable a aquesta modalitat d'autoconsum.
+En particular, la comercialitzadora ha de facturar l'energia consumida de la xarxa en períodes de facturació d'1 mes, d'acord amb les lectures i una altra informació enviada per la distribuïdora, d'acord amb els articles 13 i 14 del Reial decret 244/20219, aplicant el preu de compensació que es pacta a continuació.
+
+L'import dels excedents serà la suma horària del producte entre l'energia activa sortint (excedents) en cada hora i el preu horari de compensació d’excedents.
+
+**Import de compensació d’excedents = SUMA HORÀRIA (kWh excedentaris *h_(i)* x PHC *h_(i)***)
+
+I, *h_(i)* representa cadascuna de les hores del període de facturació en qüestió.
+
+On PHC representa el preu horari de compensació d’excedents que, per als contractes de la Península, és el preu d’OMIE, mentre que per a les Balears i Canàries és el preu horari de la demanada del Sistema Elèctric Insular (balear i canari) menys el preu que han d’aportar els excedents insulars pels costos de serveis d’ajustament de serveis en l’operació del sistema
+
+> PHC Península = Precio OMIE
+>
+> PHC insulars = SphDem-SphAuto
+
+Tal com marca la normativa, aquesta compensació serà fins a un valor màxim de compensació que iguali el valor del terme d'energia.
+Com a comercialitzadora del mercat lliure, hem establert la compensació també de la part regulada del cost de l'energia corresponent als peatges i càrrecs.
+Si el valor econòmic de l'energia excedentària és igual o superior al de l'energia utilitzada, l'import del terme d'energia en la factura serà de 0 euros.
+
+### **6**.
+**FACTURACIÓ** 
+
+6.1. Les parts acorden afegir la clàusula 7.2. bis de les Condicions Generals del Contracte de Subministrament, que queda redactada de la manera següent:
+
+Sense perjudici del que estableix la clàusula 7.2, els consums horaris per a l'aplicació de la Tarifa Indexada seran determinats a partir de les corbes horàries facilitades per l'encarregat de la lectura.
+En cas que SOM ENERGIA, SCCL, no pugui facturar a partir de les corbes horàries, SOM ENERGIA, SCCL, aplicarà als consums informats per l'encarregat de la lectura o obtinguts d'alguna de les maneres previstes a la clàusula 7.2. de les Condicions Generals del Contracte de Subministrament, els coeficients perfilats publicats per l'operador del sistema, d'acord amb el que s'estableix en la normativa vigent per a cada tipus de peatge d'accés a la xarxa de la distribuïdora[^1].
+En el cas dels punts de subministrament amb peatge d'accés a la xarxa de distribució 6.1TD, s'aplicaran els coeficients perfilats previstos en la normativa per al peatge d'accés 3.0TD .
+
+SOM ENERGIA, SCCL, ha posat a la disposició de la contractant aquestes Condicions Específiques prèviament a la seva contractació a través de la seva pàgina web [*www.somenergia.coop*](http://www.somenergia.coop).
+Aquestes han estat subscrites mitjançant sistemes de contractació electrònica, i s'ha remès un exemplar en suport durador a la contractant una vegada finalitzada la contractació.
+
+[^1]: Circular 3/2020, de 15 de gener, de la Comissió Nacional dels Mercats i la Competència, per al qual s’estableix la metodologia per al càlcul dels peatges de transport i distribució d’electricitat.
