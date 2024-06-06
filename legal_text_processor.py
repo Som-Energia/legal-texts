@@ -15,11 +15,13 @@ def extract_id(block):
     if not block: return
     chapter_match = re.match(r"#+\s+([0-9][0-9.]+)\s", block[0])
     if chapter_match:
-        return f"CHAPTER_{chapter_match.group(1).replace('.','_')}MARKDOWN"
+        chapter_number = chapter_match.group(1).replace('.','_').strip('_')
+        return f"CHAPTER_{chapter_number}_MARKDOWN"
 
-    clause_match = re.match(r"([0-9][0-9.]+)\s", block[0])
+    clause_match = re.match(r"((\d[0-9.]+)\d\.?)\s", block[0])
     if clause_match:
-        return f"CLAUSE_{clause_match.group(1).replace('.','_')}MARKDOWN"
+        clause_number = clause_match.group(1).replace('.','_').strip('_')
+        return f"CLAUSE_{clause_number}_MARKDOWN"
 
 def join_blocks(blocks):
     return '\n'.join((
