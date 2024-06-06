@@ -11,7 +11,10 @@ process() {
 	[ "$lang" = 'ca' ] || 
 	[ "$lang" = 'es' ] || 
 	[ "$lang" = 'eu' ] || 
-	[ "$lang" = 'ga' ] || die "'$lang' not a supported language"
+	[ "$lang" = 'ga' ] || 
+	[ "$lang" = 'gl' ] || die "'$lang' not a supported language"
+	# fix lang code for ga -> gl
+	[ "$lang" = 'ga' ] && lang='gl'
 
 	step "Processing language $lang"
 
