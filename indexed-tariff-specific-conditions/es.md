@@ -1,3 +1,5 @@
+# CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+
 ### 1. DEFINICIONES
 
 1.1. Todos los términos en mayúsculas incluidos en el presente documento serán interpretados conforme se definen en el mismo, y, en ausencia de definición, tal y como están definidos en las Condiciones Generales del Contrato de Suministro de energía eléctrica suscrito entre la Contratante y SOM ENERGIA, SCCL.
@@ -91,16 +93,16 @@ El coste de OMIE no se aplica a los contratos del sistema eléctrico insular (Ca
 
 - **CA** = coste regulado de los cargos del sistema eléctrico definidos por el ministerio correspondiente, aplicado sobre el total de la energía consumida.
 
-#### **Término de energía reactiva**
+#### a) Término de energía reactiva
 
 SOM ENERGIA, SCCL, aplicará a la facturación lo que indica la legislación vigente en relación con la forma de facturar los excesos de energía reactiva.
 Estos irán a cargo de la Contratante y se calcularán según el porcentaje de energía reactiva generada en la instalación respecto del consumo de energía activa, en cada uno de los periodos horarios.
 
-#### **Excesos de potencia**
+#### b) Excesos de potencia
 
 SOM ENERGIA, SCCL, aplicará a la facturación lo que indica la legislación vigente en relación con la forma de facturar los excesos de potencia de la tarifa de acceso, que irán a cargo de la Contratante por la diferencia entre la potencia contratada y la finalmente utilizada.
 
-#### **Compensación simplificada**
+#### c) Compensación simplificada
 
 En caso de estar acogido al mecanismo de compensación simplificada, la comercializadora debe reflejar en las facturas esta compensación, de acuerdo a la información facilitada por la compañía distribuidora, conforme a lo que establece el Real Decreto 244/2019 y otra normativa aplicable a esta modalidad de autoconsumo.
 En particular, la comercializadora debe facturar la energía consumida de la red en periodos de facturación de 1 mes, de acuerdo a las lecturas y otra información enviada por la distribuidora, conforme a los artículos 13 y 14 del Real Decreto 244/20219, aplicando el precio de compensación que se pacta a continuación.

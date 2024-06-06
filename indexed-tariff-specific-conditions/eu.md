@@ -1,3 +1,5 @@
+# CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+
 ### **1.** **DEFINIZIOAK**
 
 1.1. Dokumentu honetan letra larriz jasotzen diren termino guztiak bertan definitzen diren moduan interpretatuko dira eta, definituta egon ezean, Kontratugileak eta SOM ENERGIA, SCCLk sinatutako energia elektrikoko Hornidura Kontratuaren Baldintza Orokorretan definitzen diren moduan interpretatuko dira.
@@ -94,17 +96,17 @@ OMIEren kostua ez zaie aplikatzen uharteko sistema elektrikoko kontratuei (Kanar
 
 - **CA** = Dagokion Ministerioak ezarritako sistema elektrikoko karguen kostu arautua, kontsumitutako energia guztiaren gainean aplikatuta.
 
-#### Energia erreaktiboaren terminoa
+#### a) Energia erreaktiboaren terminoa
 
 SOM ENERGIA, SCCLk gehiegizko energia erreaktiboa fakturatzeko moduaren inguruan indarreko legeriak xedatzen duena aplikatuko du fakturazioan.
 Gehiegizko energia erreaktiboa Kontratugilearen kontura izango da, eta instalazioan sortutako energia erreaktiboaren ehunekoaren arabera kalkulatuko da, ordutegi-tarte bakoitzean, energia aktiboaren kontsumoarekin alderatuta.
 
-#### Potentzia-gehiegikeriak
+#### b) Potentzia-gehiegikeriak
 
 SOM ENERGIA, SCCLk sarbide-tarifaren potentzia-gehiegikeriak fakturatzeko moduaren inguruan indarreko legeriak xedatzen duena aplikatuko du fakturazioan.
 Potentzia-gehiegikeriak Kontratugilearen kontura izango dira, kontratatutako potentziaren eta azkenean erabilitako potentziaren arteko diferentziaren neurrian.
 
-#### Konpentsazio sinplifikatua
+#### c) Konpentsazio sinplifikatua
 
 Konpentsazio sinplifikatua jasotzeko aukera dagoenean, merkaturatzaileak konpentsazio hori fakturetan jaso behar du, enpresa banatzaileak emandako informazioaren arabera, 244/2019 Errege Dekretuak eta autokontsumo-modalitate horri aplikatzekoa den araudiak xedatutakoari jarraituz.
 Zehazki, merkaturatzaileak saretik kontsumitutako energia hilabete 1eko fakturazio-alditan fakturatu behar du, irakurketen eta banatzaileak bidalitako informazio osagarriaren arabera, 244/2019 Errege Dekretuko 13. eta 14. artikuluei jarraituz.
@@ -137,3 +139,5 @@ SOM ENERGIA, SCCLk ezin badu fakturatu ordutegi-kurbak oinarri hartuta, irakurke
 
 SOM ENERGIA, SCCLk Baldintza Espezifiko hauek bere webgunearen ([*www.somenergia.coop*](https://www.somenergia.coop/eu/)) bitartez Kontratugilearen eskura jarri ditu kontratazioa gauzatu aurretik.
 Baldintza Espezifiko hauek kontratazio elektronikoko sistema baten bidez sinatu dira eta, kontratazioa burutzean, Kontratugileari euskarri iraunkorreko ale bat helarazi zaio.
+
+[^1]: Merkatu eta Lehiakortasun Batzorde Nazionalaren urtarrilaren 5eko 3/2020 zirkularra, elektrizitatearen garraio- eta banaketa-bidesariak kalkulatzeko metodologia ezartzen duena.

@@ -2,18 +2,18 @@
 
 ### 1. DEFINICIONS
 
-**1.1.** Tots els termes en majúscules inclosos en el present document seran interpretats com s'hi defineixen, i, en absència de definició, tal com estan definits en les Condicions Generals del Contracte de Subministrament d'energia elèctrica subscrit entre la contractant i SOM ENERGIA, SCCL.
+1.1. Tots els termes en majúscules inclosos en el present document seran interpretats com s'hi defineixen, i, en absència de definició, tal com estan definits en les Condicions Generals del Contracte de Subministrament d'energia elèctrica subscrit entre la contractant i SOM ENERGIA, SCCL.
  
 
 ### 2. OBJECTE
 
-**2.1.** La contractant ha sol·licitat contractar la tarifa indexada, per a la qual cosa és un requisit essencial formalitzar la contractació prèvia o simultània del Contracte de Subministrament.
+2.1. La contractant ha sol·licitat contractar la tarifa indexada, per a la qual cosa és un requisit essencial formalitzar la contractació prèvia o simultània del Contracte de Subministrament.
 
-**2.2.** La tarifa indexada és una tarifa del mercat lliure amb preus horaris, calculada d'acord amb la fórmula indicada en la clàusula 5 de les presents condicions específiques.
+2.2. La tarifa indexada és una tarifa del mercat lliure amb preus horaris, calculada d'acord amb la fórmula indicada en la clàusula 5 de les presents condicions específiques.
 El seu preu és variable i depèn dels canvis que es produeixen diàriament en el mercat majorista de l'energia (OMIE), que fixa 24 preus diferents al llarg del dia, un per cada hora.
 En el cas de contractes situats a Canàries i Balears, el preu també és variable i depèn del preu del despatx de càrrega de *Red Eléctrica* fixat per a cadascun dels sistemes elèctrics insulars.
 
-**2.3.** L'objecte d'aquestes Condicions específiques de la Tarifa Indexada (d'ara endavant “**Condicions Específiques**” o “**Condicions Específiques de la Tarifa Indexada**”) és adaptar les Condicions Generals del Contracte de Subministrament a conseqüència de la contractació de la tarifa indexada.
+2.3. L'objecte d'aquestes Condicions específiques de la Tarifa Indexada (d'ara endavant “**Condicions Específiques**” o “**Condicions Específiques de la Tarifa Indexada**”) és adaptar les Condicions Generals del Contracte de Subministrament a conseqüència de la contractació de la tarifa indexada.
 Així, les presents Condicions Específiques de la Tarifa Indexada s'integren i formen part inseparable de les Condicions Generals del Contracte de Subministrament, i el seu contingut prevaldrà sobretot el que recullen les Condicions Generals del Contracte de Subministrament.
 
 ### 3. ENTRADA EN VIGOR I VIGÈNCIA
@@ -93,16 +93,16 @@ El cost d'OMIE no s'aplica als contractes del sistema elèctric insular (Canàri
 
 - **CA** = cost regulat dels càrrecs del sistema elèctric definits pel Ministeri corresponent, aplicat sobre el total de l'energia consumida.
 
-#### **Terme d'energia reactiva**
+#### a) Terme d'energia reactiva
 
 SOM ENERGIA, SCCL, aplicarà a la facturació el que indica la legislació vigent en relació amb la manera de facturar els excessos d'energia reactiva.
 Aquests són a càrrec de la contractant i es calculen segons el percentatge d'energia reactiva generada en la instal·lació respecte del consum d'energia activa, a cada un dels períodes horaris.
 
-#### **Excessos de potència**
+#### b) Excessos de potència
 
 SOM ENERGIA, SCCL, aplicarà a la facturació el que indica la legislació vigent en relació amb la manera de facturar els excessos de potència de la tarifa d'accés, que són a càrrec de la contractant per la diferència entre la potència contractada i la finalment utilitzada.
 
-#### **Compensació simplificada**
+#### c) Compensació simplificada
 
 En cas d'estar acollit al mecanisme de compensació simplificada, la comercialitzadora ha de reflectir en les factures aquesta compensació, d'acord amb la informació facilitada per la companyia distribuïdora, d'acord amb el que estableix el Reial decret 244/2019 i altra normativa aplicable a aquesta modalitat d'autoconsum.
 En particular, la comercialitzadora ha de facturar l'energia consumida de la xarxa en períodes de facturació d'1 mes, d'acord amb les lectures i una altra informació enviada per la distribuïdora, d'acord amb els articles 13 i 14 del Reial decret 244/20219, aplicant el preu de compensació que es pacta a continuació.
@@ -123,8 +123,7 @@ Tal com marca la normativa, aquesta compensació serà fins a un valor màxim de
 Com a comercialitzadora del mercat lliure, hem establert la compensació també de la part regulada del cost de l'energia corresponent als peatges i càrrecs.
 Si el valor econòmic de l'energia excedentària és igual o superior al de l'energia utilitzada, l'import del terme d'energia en la factura serà de 0 euros.
 
-### **6**.
-**FACTURACIÓ** 
+### 6. FACTURACIÓ
 
 6.1. Les parts acorden afegir la clàusula 7.2. bis de les Condicions Generals del Contracte de Subministrament, que queda redactada de la manera següent:
 

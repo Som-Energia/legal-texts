@@ -1,3 +1,5 @@
+# CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+
 ### 1. DEFINICIÓNS
 
 1.1. Todos os termos en maiúsculas incluídos no presente documento serán interpretados conforme se definen no mesmo e, en ausencia de definición, tal e como están definidos nas Condicións Xerais do Contrato de Subministración de enerxía eléctrica subscrito entre a Contratante e SOM ENERGIA, SCCL.
@@ -92,16 +94,16 @@ O custo de OMIE non se aplica aos contratos do sistema eléctrico insular (Canar
 
 - **CA** = Custo regulado dos cargos do sistema eléctrico definidos polo Ministerio correspondente, aplicado sobre o total da enerxía consumida.
 
-#### **Termo de enerxía reactiva**
+#### a) Termo de enerxía reactiva
 
 SOM ENERGIA, SCCL, aplicará á facturación o que indica a lexislación vixente en relación coa forma de facturar os excesos de enerxía reactiva.
 Estes irán a cargo da Contratante e calcularanse segundo a porcentaxe de enerxía reactiva xerada na instalación a respecto do consumo de enerxía activa, en cada un dos períodos horarios.
 
-#### **Excesos de potencia**
+#### b) Excesos de potencia
 
 SOM ENERGIA, SCCL, aplicará á facturación o que indica a lexislación vixente en relación co xeito de facturar os excesos de potencia da tarifa de acceso, que irán a cargo da Contratante pola diferenza entre a potencia contratada e a finalmente utilizada.
 
-#### **Compensación simplificada**
+#### c) Compensación simplificada
 
 En caso de estar acollido ao mecanismo de compensación simplificada, a comercializadora debe reflectir nas facturas esta compensación, de acordo coa información facilitada pola compañía distribuidora, conforme o que establece o Real Decreto 244/2019 e outra normativa aplicable a esta modalidade de autoconsumo.
 En particular, a comercializadora debe facturar a enerxía consumida da rede en período de facturación de 1 mes, de acordo coas lecturas e outra información enviada pola distribuidora, conforme aos artigos 13 e 14 do Real Decreto 244/20219, aplicando o prezo de compensación que se pacta a continuación.
