@@ -5,6 +5,8 @@ from yamlns import ns
 from pathlib import Path
 import re
 import typer
+import itertools
+from consolemsg import warn, step
 
 help="""\
 Extracts a monolingual translation yaml from a markdown of a legal text,
@@ -29,6 +31,16 @@ def join_blocks(blocks):
         for phases in blocks
     ))
 
+def unrepeated_id(existing, base):
+    if base not in existing: return base
+    warn(f"Dupped id {base}")
+    for count in itertools.count(2):
+        candidate = f"{base}__{count}"
+        if candidate not in existing:
+            return candidate
+    error(f"Unable to find a suitable id alternative to {base}")
+
+
 
 app = typer.Typer(
     help=help,
@@ -39,7 +51,6 @@ def extract(markdown_file: Path):
     print(f"extracting {markdown_file}")
     blocks = [[]]
     for line in markdown_file.open():
-        print(f"> {line}")
         if not line.strip() :
             blocks.append([])
             continue
@@ -48,7 +59,10 @@ def extract(markdown_file: Path):
     yaml = ns()
     active_id = "PRE"
     for block in blocks:
-        active_id = extract_id(block) or active_id
+        new_id = extract_id(block)
+        if new_id:
+            step(new_id)
+            active_id = unrepeated_id(yaml, new_id)
         yaml.setdefault(active_id, [])
         yaml[active_id].append(block)
 
