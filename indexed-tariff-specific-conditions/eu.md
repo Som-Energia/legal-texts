@@ -1,10 +1,10 @@
 # CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
 
-### **1.** **DEFINIZIOAK**
+### 1. DEFINIZIOAK
 
 1.1. Dokumentu honetan letra larriz jasotzen diren termino guztiak bertan definitzen diren moduan interpretatuko dira eta, definituta egon ezean, Kontratugileak eta SOM ENERGIA, SCCLk sinatutako energia elektrikoko Hornidura Kontratuaren Baldintza Orokorretan definitzen diren moduan interpretatuko dira.
 
-### **2.** **XEDEA**
+### 2. XEDEA
 
 2.1. Kontratugileak tarifa indexatua kontratatzea eskatu du.
 Eta, horretarako, oinarrizko betekizuna da Hornidura Kontratua aurretik edo aldi berean kontratatzea.
