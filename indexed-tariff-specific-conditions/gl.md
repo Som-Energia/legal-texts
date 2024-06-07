@@ -23,7 +23,7 @@ Así, as presentes Condicións Específicas da Tarifa Indexada intégranse e for
 
 3.2. Se a contratación da tarifa indexada é simultánea á formalización do contrato de subministración con SOM ENERGIA, SCCL, a vixencia deste contrato e das presentes Condicións Específicas estará suxeita ao previsto nas cláusulas 3.3 e 3.4 das Condicións Xerais do Contrato de Subministración, de xeito que se a compañía distribuidora propietaria da rede á que se conecta a Contratante denegase a alta do punto de subministración ou os cambios no contrato de acceso á rede necesarios para facer efectivo o contrato de subministración e as presentes Condicións Específicas, consideraranse ambos resoltos automaticamente sen dereito a indemnización algunha.
 
-3.3. Igualmente, a resolución por calquera causa do contrato de subministración implicará automaticamente a resolución das presentes Condicións Específicas, porque a existencia dun contrato de subministración en vigor é requisito esencial para poder contratar a tarifa indexada**.**
+3.3. Igualmente, a resolución por calquera causa do contrato de subministración implicará automaticamente a resolución das presentes Condicións Específicas, porque a existencia dun contrato de subministración en vigor é requisito esencial para poder contratar a tarifa indexada.
 
 3.4. A duración do contrato de subministración establecida na cláusula 3.3 das Condicións Xerais do Contrato de Subministración queda modificada coa contratación da tarifa indexada, de xeito que o cómputo do período dun (1) ano se iniciará na data das presentes Condicións Específicas, ou a máis tardía das súas datas en caso de contratarse máis dun produto adicional ao contrato de subministración.
  
@@ -35,7 +35,7 @@ A enerxía consumida durante o ciclo de facturación en curso no momento da sina
 
 4.2. Se a contratación da tarifa indexada é simultánea á formalización do contrato de subministración con SOM ENERGIA, SCCL, a tarifa indexada comezará a aplicarse tras cumprirse as condicións establecidas na cláusula 3 das presentes Condicións Específicas.
 
-4.3. Se, unha vez iniciada a aplicación da tarifa indexada**,** a Contratante efectúa un cambio de tarifa a calquera das tarifas vixentes e dispoñibles de SOM ENERGIA, SCCL, aplicarase a tarifa indexada ata o último día do ciclo de facturación en curso no momento de contratación da nova tarifa.
+4.3. Se, unha vez iniciada a aplicación da tarifa indexada, a Contratante efectúa un cambio de tarifa a calquera das tarifas vixentes e dispoñibles de SOM ENERGIA, SCCL, aplicarase a tarifa indexada ata o último día do ciclo de facturación en curso no momento de contratación da nova tarifa.
 
 ### 5. ADAPTACIÓN DA CLÁUSULA 5 «PREZO E ACTUALIZACIÓN»
 

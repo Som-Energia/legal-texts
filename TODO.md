@@ -27,7 +27,7 @@
 - Afegir lletres a) b) i c) als titols de nivell 4
 - Negreta del titol 6 que trencava linia en ca
 - eu negreta en titols 1. i 2.
-
+- es i gl tenen comes i punts en negreta
 
 
 
