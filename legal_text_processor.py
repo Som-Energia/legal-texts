@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 import typer
 import itertools
-from consolemsg import warn, step
+from consolemsg import warn, step, error
 
 help="""\
 Extracts a monolingual translation yaml from a markdown of a legal text,
@@ -40,22 +40,16 @@ def unrepeated_id(existing, base):
             return candidate
     error(f"Unable to find a suitable id alternative to {base}")
 
-
-
-app = typer.Typer(
-    help=help,
-)
-
-@app.command()
-def extract(markdown_file: Path):
-    print(f"extracting {markdown_file}")
+def analyze_blocks(f):
     blocks = [[]]
-    for line in markdown_file.open():
+    for line in f:
         if not line.strip() :
             blocks.append([])
             continue
         blocks[-1].append(line)
+    return blocks
 
+def extract_translations(blocks):
     yaml = ns()
     active_id = "PRE"
     for block in blocks:
@@ -66,14 +60,57 @@ def extract(markdown_file: Path):
         yaml.setdefault(active_id, [])
         yaml[active_id].append(block)
 
-
-    result = ns((
+    return ns((
         (id, join_blocks(content))
         for id, content in yaml.items()
     ))
 
+
+def ensure_extension(path: Path, extension: str):
+    if path.suffix == extension: return
+    raise Exception(f"Expected {extension} extension")
+
+app = typer.Typer(
+    help=help,
+)
+
+@app.command()
+def extract(markdown_file: Path):
+    print(f"extracting {markdown_file}")
+    ensure_extension(markdown_file, '.md')
+    blocks = analyze_blocks(markdown_file.open())
+    result = extract_translations(blocks)
     result.dump(markdown_file.with_suffix(".yaml"))
 
+@app.command()
+def template(markdown_file: Path):
+    print(f"extracting {markdown_file}")
+    ensure_extension(markdown_file, '.md')
+    blocks = analyze_blocks(markdown_file.open())
+
+    block_ids = ['PRE']
+    for block in blocks:
+        new_id = extract_id(block)
+        if not new_id: continue
+        step(new_id)
+        active_id = unrepeated_id(block_ids, new_id)
+        block_ids.append(active_id)
+
+    template_file = markdown_file.parent / 'template.md'
+    step(f"Writing {template_file}...")
+    template_file.write_text('\n'.join((
+        f"{{{id}}}" for id in block_ids
+    )))
+
+@app.command()
+def generate(translation_yaml: Path):
+    ensure_extension(translation_yaml, '.yaml')
+    translation_yaml.with_suffix('.md').write_text(content)
+    print(f"Generating {}")
+    translation = ns.load(translation_yaml)
+    template = (translation_yaml.parent/'template.md').read_text()
+    content = template.format(**translation)
+    translation_yaml.with_suffix('.md').write_text(content)
 
 if __name__ == "__main__":
     app()
