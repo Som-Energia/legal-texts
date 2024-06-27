@@ -2,8 +2,9 @@ PRE: |
   # CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
 CHAPTER_1_MARKDOWN: |
   ### 1. DEFINIZIOAK
-CLAUSE_1_1_MARKDOWN: |
+CLAUSE_1_1_MARKDOWN: |+
   1.1. Dokumentu honetan letra larriz jasotzen diren termino guztiak bertan definitzen diren moduan interpretatuko dira eta, definituta egon ezean, Kontratugileak eta SOM ENERGIA, SCCLk sinatutako energia elektrikoko Hornidura Kontratuaren Baldintza Orokorretan definitzen diren moduan interpretatuko dira.
+
 CHAPTER_2_MARKDOWN: |
   ### 2. XEDEA
 CLAUSE_2_1_MARKDOWN: |
