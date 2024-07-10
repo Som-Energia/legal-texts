@@ -45,13 +45,14 @@ Asimismo, si la Contratante lo solicita en el formulario de contratación, o a p
 
 El importe de la energía es el resultado de la suma horaria del producto entre el consumo de energía activa entrante en cada hora y el precio horario de la energía.
 
-**Importe del término energía = Suma horaria (kWh energía activa entrante *h_(i)* \* PH)**
+**Importe del término energía = Suma horaria (kWh energía activa entrante *h~i~* \* PH)**
 
-Siendo ***h_(i)***cada una de las horas del periodo de facturación en cuestión.
+Siendo ***h~i~*** cada una de las horas del periodo de facturación en cuestión.
 
 Siendo PH el precio horario de la energía calculado siguiendo la siguiente fórmula:
 
-**PH = 1,015 \* \[(PHM + Pc + Sc + Dsv + GdO + P_(OsOm)) (1 + Perd) + FE + F\] + PTD + CA**
+**PH = 1,015 \* \[(PHM + Pc + Sc + Dsv + GdO + P~OsOm~) (1 + Perd) + FE + F\] + PTD + CA**
+
 
 Donde:
 
@@ -79,7 +80,7 @@ Este coste dependerá de la energía producida por las plantas de SOM ENERGIA, S
 Al no tratarse de un coste regulado, depende de las condiciones acordadas con los proveedores de certificados.
 Este coste se actualizará trimestralmente y será publicado en el web de SOM ENERGIA, SCCL.
 
-- **P_(OsOm)** = coste del operador del sistema (REE) y del operador de mercado (OMIE).
+- **P~OsOm~** = coste del operador del sistema (REE) y del operador de mercado (OMIE).
 Se trata de un coste regulado establecido por la Comisión Nacional de los Mercados y la Competencia (CNMC).
 El coste de OMIE no se aplica a los contratos del sistema eléctrico insular (Canarias, Baleares).
 
@@ -109,7 +110,9 @@ En particular, la comercializadora debe facturar la energía consumida de la red
 
 El importe de los excedentes será la suma horaria del producto entre la energía activa saliente (excedentes) en cada hora y el precio horario de compensación de excedentes.
 
-**Importe de compensación de excedentes = SUMA HORARIA (kWh excedentarios *h_(i)* x PHC *h_(i)***)
+**Importe de compensación de excedentes = SUMA HORARIA (kWh excedentarios *h~i~* x PHC *h~i~)***
+
+Donde, *h~i~* representa cada una de las horas del periodo de facturación en cuestión.
 
 Donde, PHC representa el precio horario de compensación de excedentes que, para los contratos de la Península, es el precio de OMIE, mientras que para las Baleares y Canarias es el precio horario de la demanda del Sistema Eléctrico Insular (balear y canario) menos el precio que deben aportar los excedentes insulares por los costes de servicios de ajuste en la operación del sistema
 
