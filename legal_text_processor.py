@@ -10,8 +10,23 @@ from consolemsg import warn, step, error
 import difflib
 
 help="""\
-Extracts a monolingual translation yaml from a markdown of a legal text,
-using clause numbers as base for the string ID's.
+This CLI tool automates legaltext workflow
+from the master version in a single language,
+through translations and to generate deployable
+versions in proper format.
+
+master.docx -> import -> mydocument/es.md
+
+mydocument/es.md -> extract -> mydocument/es.yaml
+
+mydocument/es.md -> template -> mydocument/template.md
+
+mydocument/es.yaml -> weblate  ->  mydocument/XX.yaml
+
+mydocument/XX.yaml -> reintegrate  ->  mydocument/XX.md
+
+mydocument/XX.yaml -> generate -> output/mydocument.XX.pdf/html/...
+
 """
 
 def extract_id(block):
@@ -99,6 +114,11 @@ app = typer.Typer(
 
 @app.command()
 def extract(markdown_file: list[Path]):
+    """
+    Extracts a monolingual translation yaml from each markdown of a legal text.
+
+    Clause numbers are used as base for the string ID's.
+    """
     for md_file in markdown_file:
         print(f"Extracting {md_file}")
         ensure_extension(md_file, '.md')
@@ -108,6 +128,9 @@ def extract(markdown_file: list[Path]):
 
 @app.command()
 def template(markdown_file: list[Path]):
+    """
+    Extracts a template used to reintegrate back the translation files into markdown
+    """
     for md_file in markdown_file:
         step(f"Extracting template from {md_file}")
         ensure_extension(md_file, '.md')
@@ -124,7 +147,8 @@ def template(markdown_file: list[Path]):
         template_file.write_text(''.join(content))
 
 @app.command()
-def generate(translation_yaml: list[Path]):
+def reintegrate(translation_yaml: list[Path]):
+    """Reconstructs markdown files from translation yamls."""
     for yaml_file in translation_yaml:
         ensure_extension(yaml_file, '.yaml')
         markdown_file = yaml_file.with_suffix('.md')

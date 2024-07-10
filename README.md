@@ -67,9 +67,19 @@ python legal_text_processor.py  template mydocument/es.md
 ## Resynthesizing md from translations
 
 Once translators have translated the new sentences in weblate,
+the following command:
 
 
 ```bash
 python legal_text_processor.py  generate mydocument/??.yaml
 ```
-This will regenerate 
+
+will regenerate markdowns back from the specified translations.
+
+## Output documents
+
+This is still in development.
+
+
+
+

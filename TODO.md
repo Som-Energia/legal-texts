@@ -18,6 +18,7 @@
 - How to make links to open in a different windows in html
 - How to generate the TOC
 - Backlinks
+- Warn if document changes the existing template
 
 ## Hand made changes to the generated md
 
