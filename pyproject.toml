@@ -40,7 +40,7 @@ dependencies = [
 version = {attr = "legaltexts.__version__"}
 
 [project.scripts]
-legal-text-processor = "legaltexts.cli:main"
+legal-text-processor = "legaltexts.cli:app"
 
 [project.urls]
 Homepage = "https://somenergia.coop"
