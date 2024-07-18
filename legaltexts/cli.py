@@ -4,7 +4,6 @@ import typer
 from yamlns import ns
 from pathlib import Path
 import re
-import typer
 import itertools
 from consolemsg import warn, step, error
 import difflib
@@ -196,7 +195,6 @@ def generate(master_path: Path):
         )
         step(f"Generating {target}...")
         generate_pdf(markdown_file, 'pagedlegaltext.css', target)
-
 
 
 if __name__ == "__main__":

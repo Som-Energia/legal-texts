@@ -47,7 +47,9 @@ p {
 		}
 		@bottom-right {
 			content: string(title) " - " counter(page) "/" counter(pages);
-			opacity: 50%;
+			color: #777;
+			text-transform: capitalize;
+			font-size: 8pt;
 		}
 	}
 }
