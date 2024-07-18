@@ -2,7 +2,7 @@
 requires = ["setuptools", "wheel"]
 
 [project]
-name = "legal-texts"
+name = "legaltexts"
 dynamic=["version"]
 description = "Legal text pipeline tool"
 authors = [
