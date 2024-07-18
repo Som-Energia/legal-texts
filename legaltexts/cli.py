@@ -179,9 +179,17 @@ def reintegrate(translation_yaml: list[Path]):
         markdown_file.write_text(content)
 
 @app.command()
-def generate(markdown_file: Path):
+def generate(master_path: Path):
     """Generates a set of deployable files"""
-    generate_pdf(markdown_file, 'pagedlegaltext.css', "output.pdf")
+    document = master_path.name
+    output_template = 'dist/web-pdf-{document}-{lang}.pdf'
+    for markdown_file in master_path.glob('??.md'):
+        lang = markdown_file.stem
+        target = Path(output_template.format(
+            document=document,
+            lang=lang,
+        ))
+        generate_pdf(markdown_file, 'pagedlegaltext.css', target)
 
 
 
