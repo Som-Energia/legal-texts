@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "legal-texts"
+dynamic=["version"]
+description = "Legal text pipeline tool"
+authors = [
+    { name="Som Energia", email="itcrowd@somenergia.coop" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file="LICENSE"}
+keywords = ["text processing"]
+
+classifiers = [
+    'Topic :: Office/Business',
+    'Topic :: Text Processing',
+    'Intended Audience :: Legal Industry',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Framework :: Typer',
+    'Environment :: Console',
+    'Development Status :: 3 - Alpha',
+    'Operating System :: OS Independent',
+    'Natural Language :: Basque',
+    'Natural Language :: Catalan',
+    'Natural Language :: Galician',
+    'Natural Language :: Spanish',
+    'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+]
+dependencies = [
+    'yamlns',
+    'typer',
+    'consolemsg',
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "legaltexts.__version__"}
+
+[project.scripts]
+legal-text-processor = "legaltexts.cli:main"
+
+[project.urls]
+Homepage = "https://somenergia.coop"
+Documentation = "https://github.com/som-energia/legal-texts"
+Repository = "https://github.com/som-energia/legal-texts"
+Changelog = "https://github.com/som-energia/legal-texts/blob/master/CHANGELOG.md"
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.coverage.run]
+relative_files = true
+branch = true
+omit = ["**/*test.py"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --cov=backend"
+
+
