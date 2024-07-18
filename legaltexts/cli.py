@@ -29,6 +29,10 @@ mydocument/XX.md -> generate -> output/mydocument.XX.pdf/html/...
 
 """
 
+output_dir = Path(__file__).parent.parent/'output'
+if output_dir.is_relative_to(Path.cwd()):
+    output_dir = output_dir.relative_to(Path.cwd())
+
 def extract_id(block):
     if not block: return
     chapter_match = re.match(r"#+\s+([0-9][0-9.]+)\s", block[0])
@@ -182,13 +186,15 @@ def reintegrate(translation_yaml: list[Path]):
 def generate(master_path: Path):
     """Generates a set of deployable files"""
     document = master_path.name
-    output_template = 'dist/web-pdf-{document}-{lang}.pdf'
+    output_dir.mkdir(exist_ok=True)
+    output_template = 'web-pdf-{document}-{lang}.pdf'
     for markdown_file in master_path.glob('??.md'):
         lang = markdown_file.stem
-        target = Path(output_template.format(
+        target = output_dir / output_template.format(
             document=document,
             lang=lang,
-        ))
+        )
+        step(f"Generating {target}...")
         generate_pdf(markdown_file, 'pagedlegaltext.css', target)
 
 
