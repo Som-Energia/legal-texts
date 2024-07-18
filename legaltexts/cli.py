@@ -25,7 +25,7 @@ mydocument/es.yaml -> weblate  ->  mydocument/XX.yaml
 
 mydocument/XX.yaml -> reintegrate  ->  mydocument/XX.md
 
-mydocument/XX.yaml -> generate -> output/mydocument.XX.pdf/html/...
+mydocument/XX.md -> generate -> output/mydocument.XX.pdf/html/...
 
 """
 
@@ -108,6 +108,25 @@ def diff(template_file: Path, content: list[str]):
     )
     return ''.join(difflines)
 
+def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", output_pdf: Path = "output.pdf"):
+    # TODO: this should be generalized to generate each one of the documents
+    import subprocess
+    subprocess.run([
+        'pandoc',
+        str(markdown_file),
+        '--css', css_file,
+        '-t', 'html',
+        '-o', output_pdf,
+        '--metadata', 'pagetitle="CHANGE ME"',
+        '--variable', 'margin-left=25.4mm',
+        '--variable', 'margin-top=25.4mm',
+        '--variable', 'margin-right=25.4mm',
+        '--variable', 'margin-bottom=25.4mm',
+        '--variable', 'header-text="hola',
+        '--pdf-engine=weasyprint',
+        '--pdf-engine-opt=--pdf-variant=pdf/ua-1',
+    ])
+
 app = typer.Typer(
     help=help,
 )
@@ -160,25 +179,10 @@ def reintegrate(translation_yaml: list[Path]):
         markdown_file.write_text(content)
 
 @app.command()
-def generate(translation_yaml: Path):
+def generate(markdown_file: Path):
     """Generates a set of deployable files"""
-    # TODO: this should be generalized to generate each one of the documents
-    import subprocess
-    subprocess.run([
-        'pandoc',
-        str(translation_yaml),
-        '--css', 'pagedlegaltext.css',
-        '-t', 'html',
-        '-o', 'lala.pdf',
-        '--metadata', 'pagetitle="CHANGE ME"',
-        '--variable', 'margin-left=25.4mm',
-        '--variable', 'margin-top=25.4mm',
-        '--variable', 'margin-right=25.4mm',
-        '--variable', 'margin-bottom=25.4mm',
-        '--variable', 'header-text="hola',
-        '--pdf-engine=weasyprint',
-        '--pdf-engine-opt=--pdf-variant=pdf/ua-1',
-    ])
+    generate_pdf(markdown_file, 'pagedlegaltext.css', "output.pdf")
+
 
 
 if __name__ == "__main__":
