@@ -12,10 +12,10 @@ Goals:
 ## Installation
 
 ```bash
-sudo apt install pandoc
+sudo apt install pandoc weasyprint
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Converting docx files into markdown
@@ -40,9 +40,9 @@ pip install -r requirements.txt
 
 ```bash
 # first time, all languages
-python legal_text_processor.py  extract mydocument/??.md
+legal-text-processor extract mydocument/??.md
 # successive, just the reference one
-python legal_text_processor.py  extract mydocument/es.md
+legal-text-processor extract mydocument/es.md
 ```
 
 - Generates `mydocument/??.yaml` containing the translation
@@ -55,9 +55,9 @@ python legal_text_processor.py  extract mydocument/es.md
 
 ```bash
 # first time, all languages
-python legal_text_processor.py  template mydocument/??.md
+legal-text-processor template mydocument/??.md
 # successive, just the reference one
-python legal_text_processor.py  template mydocument/es.md
+legal-text-processor template mydocument/es.md
 ```
 - This generates `mydocument/template.md`.
 - If there is a previous `template.md` it will highlight differences.
@@ -69,17 +69,18 @@ python legal_text_processor.py  template mydocument/es.md
 Once translators have translated the new sentences in weblate,
 the following command:
 
-
 ```bash
-python legal_text_processor.py  generate mydocument/??.yaml
+legal-text-processor reintegrate my_output
 ```
 
 will regenerate markdowns back from the specified translations.
 
 ## Output documents
 
-This is still in development.
+TODO: This step is still under heavy development,
+this documentation does not reflect reality
+and reality will surely change.
 
-
+legal-text-processor generate ....
 
 
