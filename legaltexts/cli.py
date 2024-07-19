@@ -33,6 +33,11 @@ if output_dir.is_relative_to(Path.cwd()):
     output_dir = output_dir.relative_to(Path.cwd())
 
 def extract_id(block):
+    """
+    Check if the block starts translatable string if so retunrs the id.
+    It is detected as chapter when the block starts with a hashes and dotted number. 
+    It is detected as clause when the block starts with dotted number.
+    """
     if not block: return
     chapter_match = re.match(r"#+\s+([0-9][0-9.]+)\s", block[0])
     if chapter_match:
@@ -51,6 +56,9 @@ def join_blocks(blocks):
     ))
 
 def unrepeated_id(existing, base):
+    """
+    Given a base id, returns unique id by appending a sequence number.     
+    """
     if base not in existing: return base
     warn(f"Dupped id {base}")
     for count in itertools.count(2):
@@ -60,6 +68,10 @@ def unrepeated_id(existing, base):
     error(f"Unable to find a suitable id alternative to {base}")
 
 def analyze_blocks(f):
+    """
+    Returns an array of blocks (md paragraph),
+    composed each by an array of lines. 
+    """
     blocks = [[]]
     for line in f:
         if not line.strip() :
@@ -69,6 +81,9 @@ def analyze_blocks(f):
     return blocks
 
 def extract_translations(blocks):
+    """
+    Organized list of blocks into translation dictionary
+    """
     yaml = ns()
     active_id = "PRE"
     for block in blocks:
@@ -98,20 +113,23 @@ def extract_block_ids(blocks: list[list[str]]):
         block_ids.append(active_id)
     return block_ids
 
-def diff(template_file: Path, content: list[str]):
+def diff(old_file: Path, newcontent: list[str]):
     oldcontent = []
-    if template_file.exists():
-        with template_file.open() as f:
+    if old_file.exists():
+        with old_file.open() as f:
             oldcontent = f.readlines()
     difflines = difflib.unified_diff(
         oldcontent,
-        content,
-        fromfile=str(template_file),
+        newcontent,
+        fromfile=str(old_file),
         tofile='new',
     )
     return ''.join(difflines)
 
 def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", output_pdf: Path = "output.pdf"):
+    """
+    Generates pdf from markdown file
+    """
     # TODO: this should be generalized to generate each one of the documents
     import subprocess
     subprocess.run([
@@ -127,7 +145,7 @@ def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", out
         '--variable', 'margin-bottom=25.4mm',
         '--variable', 'header-text="hola',
         '--pdf-engine=weasyprint',
-        '--pdf-engine-opt=--pdf-variant=pdf/ua-1',
+        #'--pdf-engine-opt=--pdf-variant=pdf/ua-1',
     ])
 
 app = typer.Typer(
