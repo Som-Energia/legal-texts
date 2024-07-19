@@ -1,10 +1,12 @@
 # Som Energia legal texts
 
-This is still an experiment to have all the legal text centralized in a single repository.
+This repository contains the legal texts
+to be used in our applications and the scripts
+to generate any production format based on them.
 
-Goals:
+## Goals
 
-- Propagate changes from the legal team faster to the many uses of the texts.
+- Propagate changes from the legal team faster to the many uses of the texts
 - Have a clean format that can be easily diffable
 - Being able to translate them in weblate
 - Being able to export different required formats: html, pdf...
@@ -18,25 +20,41 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-## Converting docx files into markdown
+## Import docx files as markdown
 
-- Converting docx for all languages is expected to be done only the first time for each document.
-- For next reviews of the document, we expect to import docx just the reference language and let the translators to work with weblate to update just the changed texts
-- Use `import_docx.sh` passing all the docx files to import
-- The script expects ES GL EU CA (uppercase) to be part of the name to deduce the language
-- Sometimes GL is annotated as GA, the script fixes that
-- This step generates a clean output just with basic formatting
-- Even though it might clear too much
-- Some formatting must be reviewed
+**Master and translations:**
+The normal workflow considers the version of a document in a single original language to be the master to be imported.
+The rest of languages should be translated using Weblate.
+Still having docx files for several languages to be imported has sense in the following cases:
+
+- The first import, if translated docx files already exist
+- The expected time lapse when the legal team is not adopting single master workflow yet.
+
+Procedure:
+
+- Obtain the master docx files
+- Ensure the docx files have language markers in its name (CA, ES, EU or GL/GA, in uppercase)
+- Create a folder in this project for the document, say: `my-document/`.
+- Enter the folder and execute `import_docx.sh` passing the docx to be imported as parameters
+- This will generate `my-document/<lang>.md`
+
+About the output:
+
+- This step generates a clean markdown output just with basic formatting
+    - Even though it might clear too much
+    - Some formatting must be reviewed
 - Paragraphs are splitted by sentence.
-  This is convenient since improves the diff effectivity but this might introduce artifacts.
-  Besides some languages split or merge the sentences.
+    - This is convenient since this improves the diff effectivity but be aware of possible artifacts.
+    - Some languages split or merge the sentences in a different way.
 
-## Review md files, first import
+## Review md files after import
 
-- Compare md for each language 
+- Compare imported md files to identify real changes and formatting or import errors
+    - Against previous version in git
+    - Against same document in other languages
+- TODO: List of usual import errors
 
-## Extracting translation yamls
+## Extracting translation yaml files
 
 ```bash
 # first time, all languages
@@ -53,6 +71,8 @@ legal-text-processor extract mydocument/es.md
 
 ## Extracting template for resynthesizing md's
 
+The template is a file specifying how to compose translated texts to rebuild a translated markdown document.
+
 ```bash
 # first time, all languages
 legal-text-processor template mydocument/??.md
@@ -60,9 +80,8 @@ legal-text-processor template mydocument/??.md
 legal-text-processor template mydocument/es.md
 ```
 - This generates `mydocument/template.md`.
-- If there is a previous `template.md` it will highlight differences.
-- This is useful when providing all languages at once, to detect any missfit language.
-- This is useful to acknoledge changes in the source.
+- It will trigger colored messages if a previous `template.md` exists and any clause structure change is detected.
+- This is useful when importing several languages, to spot structure differences among them.
 
 ## Resynthesizing md from translations
 
@@ -73,9 +92,9 @@ the following command:
 legal-text-processor reintegrate my_output
 ```
 
-will regenerate markdowns back from the specified translations.
+It will regenerate markdowns back from the specified translations using the template.
 
-## Output documents
+## Generate output documents
 
 TODO: This step is still under heavy development,
 this documentation does not reflect reality
