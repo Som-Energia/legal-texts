@@ -1,6 +1,8 @@
 name: Build and Deploy
 on:
-
+  workflow_dispatch:
+  push:
+    branch: main
 permissions:
   contents: write
 jobs:
