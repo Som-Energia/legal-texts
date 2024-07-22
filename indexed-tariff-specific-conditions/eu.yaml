@@ -1,10 +1,9 @@
 PRE: |
-  # CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+  # TARIFA INDEXATUAREN BALDINTZA ESPEZIFIKOAK
 CHAPTER_1_MARKDOWN: |
   ### 1. DEFINIZIOAK
-CLAUSE_1_1_MARKDOWN: |+
+CLAUSE_1_1_MARKDOWN: |
   1.1. Dokumentu honetan letra larriz jasotzen diren termino guztiak bertan definitzen diren moduan interpretatuko dira eta, definituta egon ezean, Kontratugileak eta SOM ENERGIA, SCCLk sinatutako energia elektrikoko Hornidura Kontratuaren Baldintza Orokorretan definitzen diren moduan interpretatuko dira.
-
 CHAPTER_2_MARKDOWN: |
   ### 2. XEDEA
 CLAUSE_2_1_MARKDOWN: |
@@ -49,9 +48,9 @@ CLAUSE_5_1_MARKDOWN: |
 
   Energiaren zenbatekoa orduko batura da, eta orduero sartzen den energia aktiboaren kontsumoa energiaren orduko prezioaz biderkatuz kalkulatzen da.
 
-  **Energia-terminoaren zenbatekoa = Orduko batura (sartzen den energia aktiboa, kWh *h_(i)* \* PH)**
+  **Energia-terminoaren zenbatekoa = Orduko batura (sartzen den energia aktiboa, kWh *h~i~* \* PH)**
 
-  Non ***h_(i)***fakturazio-aldiko orduetako bakoitza baita,
+  Non ***h~i~***fakturazio-aldiko orduetako bakoitza baita,
 
   eta PH energiaren orduko prezioa, honako formula honi jarraituz kalkulatuta:
 
@@ -118,7 +117,7 @@ CLAUSE_5_1_MARKDOWN: |
 
   **Soberakinen konpentsazio-zenbatekoa = ORDUKO BATURA (soberazko kWh hi x PHC hi)**
 
-  Eta *h_(i)* balioak fakturazio-aldiko orduetako bakoitza irudikatzen du.
+  Eta *h~i~* balioak fakturazio-aldiko orduetako bakoitza irudikatzen du.
 
   Non, PHC balioak soberakinak konpentsatzeko orduko prezioa irudikatzen baitu.
   Penintsulako kontratuentzat OMIEk argitaratutako prezioa da; Balearretako eta Kanarietako kontratuentzat, berriz, hau da: uharteko sistema elektrikoko (balearra eta kanariarra, hurrenez hurren) eskariaren orduko prezioa ken sistemaren operazioko doikuntza-zerbitzuen kostuengatik uharteko soberakinek ordaindu behar duten prezioa.
@@ -133,12 +132,12 @@ CLAUSE_5_1_MARKDOWN: |
 CHAPTER_6_MARKDOWN: "### 6. FAKTURAZIOA \n"
 CLAUSE_6_1_MARKDOWN: |
   6.1. Alderdiek adosten dute Hornidura Kontratuaren Baldintza Orokorretako 7.2. bis klausula gehitzea, zeina honela idatzita geratuko baita:
-
+CLAUSE_7_2_MARKDOWN: |
   7.2. klausulan xedatutako eragotzi gabe, Tarifa Indexatua aplikatzeko orduko kontsumoak irakurketa egiteaz arduratzen den pertsonak aurkeztutako ordutegi-kurbak oinarri hartuta kalkulatuko dira.
-  SOM ENERGIA, SCCLk ezin badu fakturatu ordutegi-kurbak oinarri hartuta, irakurketa egiteaz arduratzen den pertsonak jakinarazitako edo Hornidura Kontratuaren Baldintza Orokorretako 7.2. klausulan aurreikusitako moduren batean eskuratutako kontsumoei sistema-operadoreak argitaratutako koefiziente perfilatuak aplikatuko dizkie, banatzailearen sarerako sarbide-bidesari mota bakoitzarentzat indarrean dagoen araudiak xedatutakoarekin bat etorriaz.
+  SOM ENERGIA, SCCLk ezin badu fakturatu ordutegi-kurbak oinarri hartuta, irakurketa egiteaz arduratzen den pertsonak jakinarazitako edo Hornidura Kontratuaren Baldintza Orokorretako 7.2. klausulan aurreikusitako moduren batean eskuratutako kontsumoei sistema-operadoreak argitaratutako koefiziente perfilatuak aplikatuko dizkie, banatzailearen sarerako sarbide-bidesari mota bakoitzarentzat indarrean dagoen araudiak xedatutakoarekin bat etorriaz[^1].
   6.1TD banaketa-sarerako sarbide-bidesaria duten hornidura-puntuen kasuan, 3.0TD sarbide-bidesariarentzat araudiak ezartzen dituen koefiziente perfilatuak aplikatuko dira.
 
   SOM ENERGIA, SCCLk Baldintza Espezifiko hauek bere webgunearen ([*www.somenergia.coop*](https://www.somenergia.coop/eu/)) bitartez Kontratugilearen eskura jarri ditu kontratazioa gauzatu aurretik.
   Baldintza Espezifiko hauek kontratazio elektronikoko sistema baten bidez sinatu dira eta, kontratazioa burutzean, Kontratugileari euskarri iraunkorreko ale bat helarazi zaio.
 
-  [^1]: Merkatu eta Lehiakortasun Batzorde Nazionalaren urtarrilaren 5eko 3/2020 zirkularra, elektrizitatearen garraio- eta banaketa-bidesariak kalkulatzeko metodologia ezartzen duena.
+  [^1]: Merkatu eta Lehiakortasun Batzorde Nazionalaren urtarrilaren 15eko 3/2020 Zirkularra, zeinaren bidez ezartzen baita elektrizitatearen garraio- eta banaketa-bidesariak kalkulatzeko metodologia.
