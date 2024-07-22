@@ -10,32 +10,32 @@ jobs:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: 🛎️ Checkout
         uses: actions/checkout@v4
 
-      - name: Install system dependencies 🖥️
+      - name: 🖥️ Install system dependencies
         run: |
           sudo apt-get update
           sudo apt install pandoc weasyprint
 
-      - name: Setup Python 🐍
+      - name: 🐍 Setup Python
         uses: actions/setup-python@v2
 
-      - name: Install dependencies 💿
+      - name: 💿 Install dependencies
         run: |
           pip install -e .
 
-      - name: Build 🔧
+      - name: 🔧 Build
         run: |
           legal-text-processor reintegrate indexed-tariff-specific-conditions/??.yaml
           legal-text-processor generate indexed-tariff-specific-conditions/
 
-      - name: Generate Directory Listings 📂
+      - name: 📂 Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@v4.0.0
         with:
           FOLDER: output
 
-      - name: Deploy 🚀
+      - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: output
