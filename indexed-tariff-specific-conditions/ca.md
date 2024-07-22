@@ -47,7 +47,7 @@ L'import de l'energia és el resultat de la suma horària del producte entre el 
 
 **Import del terme energia = Suma horària (kWh Energia Activa entrant *h~i~* \* PH)**
 
-Sent ***h~i~***cada una de les hores del període de facturació en qüestió.
+Sent ***h~i~*** cada una de les hores del període de facturació en qüestió.
 
 Sent PH el preu horari de l'energia calculat seguint la fórmula següent:
 
