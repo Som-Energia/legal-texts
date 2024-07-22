@@ -1,4 +1,4 @@
-# CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+# TARIFA INDEXATUAREN BALDINTZA ESPEZIFIKOAK
 
 ### 1. DEFINIZIOAK
 
@@ -134,10 +134,10 @@ Soberazko energiaren balio ekonomikoa erabilitako energiarena edo hortik gorakoa
 6.1. Alderdiek adosten dute Hornidura Kontratuaren Baldintza Orokorretako 7.2. bis klausula gehitzea, zeina honela idatzita geratuko baita:
 
 7.2. klausulan xedatutako eragotzi gabe, Tarifa Indexatua aplikatzeko orduko kontsumoak irakurketa egiteaz arduratzen den pertsonak aurkeztutako ordutegi-kurbak oinarri hartuta kalkulatuko dira.
-SOM ENERGIA, SCCLk ezin badu fakturatu ordutegi-kurbak oinarri hartuta, irakurketa egiteaz arduratzen den pertsonak jakinarazitako edo Hornidura Kontratuaren Baldintza Orokorretako 7.2. klausulan aurreikusitako moduren batean eskuratutako kontsumoei sistema-operadoreak argitaratutako koefiziente perfilatuak aplikatuko dizkie, banatzailearen sarerako sarbide-bidesari mota bakoitzarentzat indarrean dagoen araudiak xedatutakoarekin bat etorriaz.
+SOM ENERGIA, SCCLk ezin badu fakturatu ordutegi-kurbak oinarri hartuta, irakurketa egiteaz arduratzen den pertsonak jakinarazitako edo Hornidura Kontratuaren Baldintza Orokorretako 7.2. klausulan aurreikusitako moduren batean eskuratutako kontsumoei sistema-operadoreak argitaratutako koefiziente perfilatuak aplikatuko dizkie, banatzailearen sarerako sarbide-bidesari mota bakoitzarentzat indarrean dagoen araudiak xedatutakoarekin bat etorriaz[^1].
 6.1TD banaketa-sarerako sarbide-bidesaria duten hornidura-puntuen kasuan, 3.0TD sarbide-bidesariarentzat araudiak ezartzen dituen koefiziente perfilatuak aplikatuko dira.
 
 SOM ENERGIA, SCCLk Baldintza Espezifiko hauek bere webgunearen ([*www.somenergia.coop*](https://www.somenergia.coop/eu/)) bitartez Kontratugilearen eskura jarri ditu kontratazioa gauzatu aurretik.
 Baldintza Espezifiko hauek kontratazio elektronikoko sistema baten bidez sinatu dira eta, kontratazioa burutzean, Kontratugileari euskarri iraunkorreko ale bat helarazi zaio.
 
-[^1]: Merkatu eta Lehiakortasun Batzorde Nazionalaren urtarrilaren 5eko 3/2020 zirkularra, elektrizitatearen garraio- eta banaketa-bidesariak kalkulatzeko metodologia ezartzen duena.
+[^1]: Merkatu eta Lehiakortasun Batzorde Nazionalaren urtarrilaren 15eko 3/2020 Zirkularra, zeinaren bidez ezartzen baita elektrizitatearen garraio- eta banaketa-bidesariak kalkulatzeko metodologia.
