@@ -1,4 +1,4 @@
-# CONDICIONS ESPECÍFIQUES DE LA TARIFA INDEXADA
+# CONDICIÓNS ESPECÍFICAS DA TARIFA INDEXADA
 
 ### 1. DEFINICIÓNS
 
@@ -7,41 +7,41 @@
 
 ### 2. OBXECTO
 
-2.1. A Contratante solicitou contratar a tarifa indexada, para o cal é un requisito esencial formalizar a contratación previa ou simultánea do contrato de subministración.
+2.1. A Contratante solicitou contratar a tarifa indexada, para o cal é un requisito esencial formalizar a contratación previa ou simultánea do Contrato de Subministración.
 
 2.2. A Tarifa Indexada é unha tarifa do mercado libre indexada con prezos horarios, calculada de acordo coa fórmula indicada na cláusula 5 das presentes condicións específicas.
 O seu prezo é variable e depende dos cambios que se producen diariamente no mercado grosista da enerxía (OMIE), que fixa 24 prezos diferentes ao longo do día, un por cada hora.
 No caso de contratos situados en Canarias e Baleares, o seu prezo tamén é variable e depende do prezo do despacho de carga de Rede Eléctrica fixado para cada un dos sistemas eléctricos insulares.
 
-2.3. O obxecto destas Condicións específicas da tarifa indexada (en diante, «**Condicións Específicas**» ou «**Condicións Específicas da Tarifa Indexada**») é adaptar as Condicións Xerais do Contrato de Subministración como consecuencia da contratación da tarifa indexada.
+2.3. O obxecto destas Condicións específicas da Tarifa Indexada (en diante, «**Condicións Específicas**» ou «**Condicións Específicas da Tarifa Indexada**») é adaptar as Condicións Xerais do Contrato de Subministración como consecuencia da contratación da tarifa indexada.
 Así, as presentes Condicións Específicas da Tarifa Indexada intégranse e forman parte inseparable das Condicións Xerais do Contrato de Subministración, e o seu contido prevalecerá sobre todo o que recollen as Condicións Xerais do Contrato de Subministración.
  
 
 ### 3. ENTRADA EN VIGOR E VIXENCIA
 
-3.1. As presentes Condicións Específicas estarán en vigor desde a data que consta nelas, aínda que a súa vixencia está condicionada á vixencia do contrato da subministración.
+3.1. As presentes Condicións Específicas estarán en vigor desde a data que consta nelas, aínda que a súa vixencia está condicionada á vixencia do Contrato da Subministración.
 
-3.2. Se a contratación da tarifa indexada é simultánea á formalización do contrato de subministración con SOM ENERGIA, SCCL, a vixencia deste contrato e das presentes Condicións Específicas estará suxeita ao previsto nas cláusulas 3.3 e 3.4 das Condicións Xerais do Contrato de Subministración, de xeito que se a compañía distribuidora propietaria da rede á que se conecta a Contratante denegase a alta do punto de subministración ou os cambios no contrato de acceso á rede necesarios para facer efectivo o contrato de subministración e as presentes Condicións Específicas, consideraranse ambos resoltos automaticamente sen dereito a indemnización algunha.
+3.2. Se a contratación da Tarifa Indexada é simultánea á formalización do contrato de subministración con SOM ENERGIA, SCCL, a vixencia deste contrato e das presentes Condicións Específicas estará suxeita ao previsto nas cláusulas 3.3 e 3.4 das Condicións Xerais do Contrato de Subministración, de xeito que se a compañía distribuidora propietaria da rede á que se conecta a Contratante denegase a alta do punto de subministración ou os cambios no contrato de acceso á rede necesarios para facer efectivo o contrato de subministración e as presentes Condicións Específicas, consideraranse ambos resoltos automaticamente sen dereito a indemnización algunha.
 
-3.3. Igualmente, a resolución por calquera causa do contrato de subministración implicará automaticamente a resolución das presentes Condicións Específicas, porque a existencia dun contrato de subministración en vigor é requisito esencial para poder contratar a tarifa indexada.
+3.3. Igualmente, a resolución por calquera causa do contrato de subministración implicará automaticamente a resolución das presentes Condicións Específicas, porque a existencia dun Contrato de Subministración en vigor é requisito esencial para poder contratar a Tarifa Indexada.
 
-3.4. A duración do contrato de subministración establecida na cláusula 3.3 das Condicións Xerais do Contrato de Subministración queda modificada coa contratación da tarifa indexada, de xeito que o cómputo do período dun (1) ano se iniciará na data das presentes Condicións Específicas, ou a máis tardía das súas datas en caso de contratarse máis dun produto adicional ao contrato de subministración.
+3.4. A duración do Contrato de Subministración establecida na cláusula 3.3 das Condicións Xerais do Contrato de Subministración queda modificada coa contratación da Tarifa Indexada, de xeito que o cómputo do período dun (1) ano se iniciará na data das presentes Condicións Específicas, ou a máis tardía das súas datas en caso de contratarse máis dun produto adicional ao Contrato de Subministración.
  
 
 ### 4. DATA DE INICIO E FINALIZACIÓN DA TARIFA INDEXADA
 
-4.1. Se a Contratante está contratando a tarifa indexada, mediante unha modificación de tarifa, e dispón previamente dun contrato de subministración con SOM ENERGIA, SCCL, sen prexuízo do establecido na cláusula anterior sobre a entrada en vigor e vixencia, as partes acordan que a tarifa indexada contratada comece a aplicarse a partir do primeiro día do ciclo de facturación seguinte á data das presentes Condicións Específicas.
-A enerxía consumida durante o ciclo de facturación en curso no momento da sinatura destas Condicións Específicas será facturada coa tarifa que se aplicaba antes de contratar a tarifa indexada.
+4.1. Se a Contratante está contratando a Tarifa Indexada, mediante unha modificación de tarifa, e dispón previamente dun Contrato de Subministración con SOM ENERGIA, SCCL, sen prexuízo do establecido na cláusula anterior sobre a entrada en vigor e vixencia, as partes acordan que a Tarifa Indexada contratada comece a aplicarse a partir do primeiro día do ciclo de facturación seguinte á data das presentes Condicións Específicas.
+A enerxía consumida durante o ciclo de facturación en curso no momento da sinatura destas Condicións Específicas será facturada coa tarifa que se aplicaba antes de contratar a Tarifa Indexada.
 
-4.2. Se a contratación da tarifa indexada é simultánea á formalización do contrato de subministración con SOM ENERGIA, SCCL, a tarifa indexada comezará a aplicarse tras cumprirse as condicións establecidas na cláusula 3 das presentes Condicións Específicas.
+4.2. Se a contratación da Tarifa Indexada é simultánea á formalización do contrato de subministración con SOM ENERGIA, SCCL, a tarifa indexada comezará a aplicarse tras cumprirse as condicións establecidas na cláusula 3 das presentes Condicións Específicas.
 
-4.3. Se, unha vez iniciada a aplicación da tarifa indexada, a Contratante efectúa un cambio de tarifa a calquera das tarifas vixentes e dispoñibles de SOM ENERGIA, SCCL, aplicarase a tarifa indexada ata o último día do ciclo de facturación en curso no momento de contratación da nova tarifa.
+4.3. Se, unha vez iniciada a aplicación da Tarifa Indexada, a Contratante efectúa un cambio de tarifa a calquera das tarifas vixentes e dispoñibles de SOM ENERGIA, SCCL, aplicarase a tarifa indexada ata o último día do ciclo de facturación en curso no momento de contratación da nova tarifa.
 
 ### 5. ADAPTACIÓN DA CLÁUSULA 5 «PREZO E ACTUALIZACIÓN»
 
 5.1. As partes acordan engadir a cláusula 5.6 das Condicións Xerais do Contrato de Subministración, que queda redactada do seguinte xeito:
 
-En caso de contratar a tarifa indexada, a Contratante aboará en contraprestación á subministración contratada o prezo e demais conceptos descritos a continuación, así como os impostos aplicables ao tipo vixente en cada momento e todas aquelas prestacións patrimoniais e/ou outras legalmente esixible.
+En caso de contratar a Tarifa Indexada, a Contratante aboará en contraprestación á subministración contratada o prezo e demais conceptos descritos a continuación, así como os impostos aplicables ao tipo vixente en cada momento e todas aquelas prestacións patrimoniais e/ou outras legalmente esixible.
 Do mesmo xeito, se a Contratante o solicita no formulario de contratación ou a posteriori a través da oficina virtual, engadirase ao importe anterior o correspondente ao donativo voluntario para axudar ao desenvolvemento da cooperativa.
 
 O importe da enerxía é o resultado da suma horaria do produto entre o consumo de enerxía activa entrante en cada hora e o prezo horario da enerxía.
@@ -128,7 +128,7 @@ Se o valor económico da enerxía excedentaria é igual ou superior ao da enerx�
 
 6.1. As partes acordan engadir a cláusula 7.2 das Condicións Xerais do Contrato de Subministración, que queda redactada do seguinte xeito:
 
-Sen prexuízo do establecido na cláusula 7.2, os consumos horarios para a aplicación da tarifa indexada serán determinados a partir das curvas horarias facilitadas polo encargado da lectura.
+Sen prexuízo do establecido na cláusula 7.2, os consumos horarios para a aplicación da Tarifa Indexada serán determinados a partir das curvas horarias facilitadas polo encargado da lectura.
 En caso de que SOM ENERGIA, SCCL, non poida facturar con base en curvas horarias, SOM ENERGIA, SCCL, aplicará aos consumos informados polo encargado da lectura ou obtidos dalgún dos xeitos previstos na cláusula 7.2. das Condicións Xerais do Contrato de Subministración os coeficientes perfilados publicados polo operador do sistema, de acordo co establecido na normativa vixente para cada tipo de peaxe de acceso á rede da distribuidora[^1].
 No caso dos puntos de subministración con peaxe de acceso á rede de distribución 6.1TD, aplicaranse os coeficientes perfilados previstos na normativa para a peaxe de acceso 3.0TD.
 
