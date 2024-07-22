@@ -11,14 +11,20 @@
 
 ## Pending unknowns
 
-- Com recomposar el document a partir de les cadenes traduides
-- Given a markdown how to properly format into pdf
-- Given a markdown how to properly format into html selfcontained
-- Given a markdown how to properly format into html embeded
-- How to make links to open in a different windows in html
-- How to generate the TOC
-- Backlinks
-- Warn if document changes the existing template
+- [x] Com recomposar el document a partir de les cadenes traduides
+- [x] Given a markdown how to properly format into pdf
+- [ ] Given a markdown how to properly format into html selfcontained
+- [ ] Given a markdown how to properly format into html embeded
+- [ ] HTML: How to make links to open in a different windows in html
+- [ ] HTML: How to generate the TOC
+- [ ] HTML: Backlinks
+- [x] PDF: CSS Styling
+- [x] PDF: how to generate TOC metadata
+- [x] PDF: Page header
+- [x] PDF: Page footers refering pages and document title
+- [x] Warn if document changes the existing template
+- [ ] If no master provided, locate all documents to reintegrate by looking at template.md
+- [ ] Declarative output definition
 
 ## Hand made changes to the generated md
 
