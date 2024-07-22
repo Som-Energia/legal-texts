@@ -16,7 +16,7 @@ jobs:
       - name: 🖥️ Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt install pandoc weasyprint
+          sudo apt install pandoc weasyprint fonts-roboto fonts-montserrat
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v2
