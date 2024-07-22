@@ -47,9 +47,9 @@ Halaber, Kontratugileak kontratazio-formularioan, edo gero Bulego Birtualaren bi
 
 Energiaren zenbatekoa orduko batura da, eta orduero sartzen den energia aktiboaren kontsumoa energiaren orduko prezioaz biderkatuz kalkulatzen da.
 
-**Energia-terminoaren zenbatekoa = Orduko batura (sartzen den energia aktiboa, kWh *h_(i)* \* PH)**
+**Energia-terminoaren zenbatekoa = Orduko batura (sartzen den energia aktiboa, kWh *h~i~* \* PH)**
 
-Non ***h_(i)***fakturazio-aldiko orduetako bakoitza baita,
+Non ***h~i~***fakturazio-aldiko orduetako bakoitza baita,
 
 eta PH energiaren orduko prezioa, honako formula honi jarraituz kalkulatuta:
 
@@ -116,7 +116,7 @@ Soberakinen zenbatekoa orduko batura da, eta orduero irteten den energia aktiboa
 
 **Soberakinen konpentsazio-zenbatekoa = ORDUKO BATURA (soberazko kWh hi x PHC hi)**
 
-Eta *h_(i)* balioak fakturazio-aldiko orduetako bakoitza irudikatzen du.
+Eta *h~i~* balioak fakturazio-aldiko orduetako bakoitza irudikatzen du.
 
 Non, PHC balioak soberakinak konpentsatzeko orduko prezioa irudikatzen baitu.
 Penintsulako kontratuentzat OMIEk argitaratutako prezioa da; Balearretako eta Kanarietako kontratuentzat, berriz, hau da: uharteko sistema elektrikoko (balearra eta kanariarra, hurrenez hurren) eskariaren orduko prezioa ken sistemaren operazioko doikuntza-zerbitzuen kostuengatik uharteko soberakinek ordaindu behar duten prezioa.

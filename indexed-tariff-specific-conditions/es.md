@@ -53,7 +53,6 @@ Siendo PH el precio horario de la energía calculado siguiendo la siguiente fór
 
 **PH = 1,015 \* \[(PHM + Pc + Sc + Dsv + GdO + P~OsOm~) (1 + Perd) + FE + F\] + PTD + CA**
 
-
 Donde:
 
 - **PH** = precio horario de la energía.
@@ -110,9 +109,9 @@ En particular, la comercializadora debe facturar la energía consumida de la red
 
 El importe de los excedentes será la suma horaria del producto entre la energía activa saliente (excedentes) en cada hora y el precio horario de compensación de excedentes.
 
-**Importe de compensación de excedentes = SUMA HORARIA (kWh excedentarios *h~i~* x PHC *h~i~)***
+**Importe de compensación de excedentes = SUMA HORARIA (kWh excedentarios *h~i~* x PHC *h~i~***)
 
-Donde, *h~i~* representa cada una de las horas del periodo de facturación en cuestión.
+Y, *h~i~* representa cada una de las horas del periodo de facturación en cuestión.
 
 Donde, PHC representa el precio horario de compensación de excedentes que, para los contratos de la Península, es el precio de OMIE, mientras que para las Baleares y Canarias es el precio horario de la demanda del Sistema Eléctrico Insular (balear y canario) menos el precio que deben aportar los excedentes insulares por los costes de servicios de ajuste en la operación del sistema
 
@@ -130,6 +129,7 @@ Si el valor económico de la energía excedentaria es igual o superior al de la 
 
 Sin perjuicio de lo establecido en la cláusula 7.2, los consumos horarios para la aplicación de la Tarifa Indexada serán determinados a partir de las curvas horarias facilitadas por el encargado de la lectura.
 En caso de que SOM ENERGIA, SCCL, no pueda facturar con base en curvas horarias, SOM ENERGIA, SCCL, aplicará a los consumos informados por el encargado de la lectura u obtenidos de alguna de las maneras previstas en la cláusula 7.2. de las Condiciones Generales del Contrato de Suministro, los coeficientes perfilados publicados por el operador del sistema, de acuerdo con lo establecido en la normativa vigente para cada tipo de peaje de acceso a la red de la distribuidora[^1].
+
 En el caso de los puntos de suministro con peaje de acceso a la red de distribución 6.1TD, se aplicarán los coeficientes perfilados previstos en la normativa para el peaje de acceso 3.0TD.
 
 SOM ENERGIA, SCCL, ha puesto a disposición de la Contratante las presentes Condiciones Específicas previamente a su contratación a través de su página web [*www.somenergia.coop*](https://www.somenergia.coop/es/).

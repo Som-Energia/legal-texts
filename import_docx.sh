@@ -22,6 +22,8 @@ process() {
 
 	# Break paragraphs by phrases
 	sed -i 's/\([^0-9]\.\) /\1\n/g' $lang.md
+	# Fix subscripts
+	sed -i 's/_(\([^)][^)]*\))/~\1~/g' $lang.md
 }
 
 for a in "$@"; do
