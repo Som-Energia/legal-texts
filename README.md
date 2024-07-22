@@ -4,6 +4,9 @@ This repository contains the legal texts
 to be used in our applications and the scripts
 to generate any production format based on them.
 
+Generated output: <https://som-energia.github.io/legal-texts/>
+
+
 ## Goals
 
 - Propagate changes from the legal team faster to the many uses of the texts
@@ -101,5 +104,8 @@ this documentation does not reflect reality
 and reality will surely change.
 
 legal-text-processor generate ....
+
+
+
 
 
