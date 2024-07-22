@@ -30,6 +30,11 @@ jobs:
           legal-text-processor reintegrate indexed-tariff-specific-conditions/??.yaml
           legal-text-processor generate indexed-tariff-specific-conditions/
 
+      - name: Generate Directory Listings
+        uses: jayanta525/github-pages-directory-listing@v4.0.0
+        with:
+          FOLDER: output
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
