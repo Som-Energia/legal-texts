@@ -2,8 +2,9 @@ PRE: |
   # TARIFA INDEXATUAREN BALDINTZA ESPEZIFIKOAK
 CHAPTER_1_MARKDOWN: |
   ### 1. DEFINIZIOAK
-CLAUSE_1_1_MARKDOWN: |
+CLAUSE_1_1_MARKDOWN: |+
   1.1. Dokumentu honetan letra larriz jasotzen diren termino guztiak bertan definitzen diren moduan interpretatuko dira eta, definituta egon ezean, Kontratugileak eta SOM ENERGIA, SCCLk sinatutako energia elektrikoko Hornidura Kontratuaren Baldintza Orokorretan definitzen diren moduan interpretatuko dira.
+
 CHAPTER_2_MARKDOWN: |
   ### 2. XEDEA
 CLAUSE_2_1_MARKDOWN: |
@@ -15,9 +16,10 @@ CLAUSE_2_2_MARKDOWN: |
   Prezio aldakorra du, prezioa energiaren handizkako merkatuan (OMIE) egunero gertatzen diren aldaketen mende dagoelako.
   OMIEk 24 prezio desberdin ezartzen ditu egunean zehar, bat orduko.
   Kanarietako eta Balearretako kontratuen prezioa aldakorra da ere, eta uharteko sistema elektriko bakoitzerako Red Eléctricak karga abiarazteko ezarri duen prezioaren mende dago.
-CLAUSE_2_3_MARKDOWN: |
+CLAUSE_2_3_MARKDOWN: |+
   2.3. Tarifa Indexatuaren baldintza espezifiko hauen (aurrerantzean, “**Baldintza Espezifikoak**” edo “**Tarifa Indexatuaren Baldintza Espezifikoak**”) xedea da, Tarifa Indexatuaren kontratazioaren ondorioz, Hornidura Kontratuaren Baldintza Orokorrak egokitzea.
   Tarifa Indexatuaren Baldintza Espezifiko hauek Hornidura Kontratuaren Baldintza Orokorretatik banaezinak dira, eta haien edukiak lehentasuna izango du Hornidura Kontratuaren Baldintza Orokorrek xedatzen dutenaren aurrean.
+
 CHAPTER_3_MARKDOWN: |
   ### 3. INDARREAN SARTZEA ETA INDARRALDIA
 CLAUSE_3_1_MARKDOWN: |
