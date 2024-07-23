@@ -37,6 +37,7 @@ p {
 	text-align: justify;
 }
 
+/* failed attempt to emphasize clause numbers */
 .clause {
 	display: inline-block;
 	font-weight: bold;

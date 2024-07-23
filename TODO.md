@@ -1,12 +1,16 @@
+## Deute tècnic
 
-## Check whether there is a handy way to translate legal texts in weblate
-
-- Extract md from scratch (docx)
-- Correct and annote what to correct
-- Extract yamls
-- Analyze yamls compared among themselves
-- Commit them
-- Create a translation project
+- [ ] Posar els assets a un directori
+- [ ] Moure les operacions de gha a un makefile
+- [ ] Fer servir l'acció de notificacio al chat quan falla
+- [ ] Integrar l'script d'importació (bash) a l'script python principal
+- [ ] Generalitzar la reintegració (processar tots els masters que tenen un template.md)
+- [ ] Generalitzar la generació per declarativament definir:
+    - Nom de la sortida
+    - Quins inputs pren
+    - Quin conversor fa servir
+    - Paràmetres
+- [ ] En la extracció comprovar que la numeració és consecutiva
 
 
 ## Pending unknowns
@@ -35,6 +39,7 @@
 - Negreta del titol 6 que trencava linia en ca
 - eu negreta en titols 1. i 2.
 - es i gl tenen comes i punts en negreta
+- els subindexos es marquen amb `\_(contingut)` i ha de ser `~contingut~` o en LaTeX
 
 
 
