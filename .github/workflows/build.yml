@@ -23,6 +23,7 @@ jobs:
 
       - name: 💿 Install dependencies
         run: |
+          crashme
           pip install -e .
 
       - name: 🔧 Build
