@@ -13,9 +13,10 @@ CLAUSE_2_2_MARKDOWN: |
   2.2. La tarifa indexada és una tarifa del mercat lliure amb preus horaris, calculada d'acord amb la fórmula indicada en la clàusula 5 de les presents condicions específiques.
   El seu preu és variable i depèn dels canvis que es produeixen diàriament en el mercat majorista de l'energia (OMIE), que fixa 24 preus diferents al llarg del dia, un per cada hora.
   En el cas de contractes situats a Canàries i Balears, el preu també és variable i depèn del preu del despatx de càrrega de *Red Eléctrica* fixat per a cadascun dels sistemes elèctrics insulars.
-CLAUSE_2_3_MARKDOWN: |
+CLAUSE_2_3_MARKDOWN: |+
   2.3. L'objecte d'aquestes Condicions específiques de la Tarifa Indexada (d'ara endavant “**Condicions Específiques**” o “**Condicions Específiques de la Tarifa Indexada**”) és adaptar les Condicions Generals del Contracte de Subministrament a conseqüència de la contractació de la tarifa indexada.
   Així, les presents Condicions Específiques de la Tarifa Indexada s'integren i formen part inseparable de les Condicions Generals del Contracte de Subministrament, i el seu contingut prevaldrà sobretot el que recullen les Condicions Generals del Contracte de Subministrament.
+
 CHAPTER_3_MARKDOWN: |
   ### 3. ENTRADA EN VIGOR I VIGÈNCIA
 CLAUSE_3_1_MARKDOWN: |
@@ -24,9 +25,8 @@ CLAUSE_3_2_MARKDOWN: |
   3.2. Si la contractació de la Tarifa Indexada és simultània a la formalització del contracte de subministrament amb SOM ENERGIA, SCCL, la vigència d’aquest contracte i d'aquestes Condicions Específiques estaran subjectes al que preveuen les clàusules 3.3 i 3.4 de les Condicions Generals del Contracte de Subministrament, de manera que si la companyia distribuïdora, propietària de la xarxa a la qual es connecta la contractant, denegués l'alta del punt de subministrament o els canvis en el contracte d'accés a xarxa necessaris per fer efectiu el Contracte de Subministrament i aquestes Condicions Específiques, es consideraran tots dos resolts automàticament sense dret a cap indemnització.
 CLAUSE_3_3_MARKDOWN: |
   3.3. Igualment, la resolució per qualsevol causa del Contracte de Subministrament comportarà automàticament la resolució d'aquestes Condicions Específiques, perquè l'existència d'un contracte de subministrament en vigor és requisit essencial per poder contractar la Tarifa Indexada.
-CLAUSE_3_4_MARKDOWN: |+
+CLAUSE_3_4_MARKDOWN: |
   3.4. La durada del Contracte de Subministrament establerta a la clàusula 3.3 de les Condicions Generals del Contracte de Subministrament queda modificada amb la contractació de la Tarifa Indexada, de manera que el còmput del període d'un (1) any s'iniciarà en la data d'aquestes Condicions Específiques, o la més tardana de les seves dates en cas de contractar-se més d'un producte addicional al Contracte de Subministrament.
-
 CHAPTER_4_MARKDOWN: |
   ### 4. DATA D'INICI I FINALITZACIÓ DE LA TARIFA INDEXADA
 CLAUSE_4_1_MARKDOWN: |
