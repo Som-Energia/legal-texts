@@ -39,3 +39,10 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: output
+
+      - name: 🗨️ Notify
+        uses: Som-Energia/ghactions-notify@main
+        if: always()
+        with:
+          webhook: ${{ secrets.WEBHOOK_ALERTES_WEBAPPS }}
+
