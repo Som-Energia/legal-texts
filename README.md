@@ -1,6 +1,6 @@
 # Som Energia legal texts
 
-![CI Status](https://github.com/som-energia/legal-texts/actions/workflows/build.yml/badge.svg?branch=main)
+[![CI Status](https://github.com/som-energia/legal-texts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Som-Energia/legal-texts/actions)
 
 This repository contains the legal texts
 to be used in our applications and the scripts
