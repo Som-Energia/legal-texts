@@ -23,6 +23,7 @@ jobs:
 
       - name: 💿 Install dependencies
         run: |
+          recrashme
           pip install -e .
 
       - name: 🔧 Build
