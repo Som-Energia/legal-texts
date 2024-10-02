@@ -25,7 +25,72 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-## Import docx files as markdown
+## Glossary
+
+### Actors
+
+- Legal team: Produces and maintains legal texts
+- Translation team: Translates legal text to different languages
+- Communication team: Decide how and where to present the documents to the users
+- Integrators: IT crew that adapts and inject masters into the system
+- Deployers: IT and Communication crew that use the documents in their platforms
+
+### Artifacts
+
+Master document
+: A document produced and maintained by the legal team, usually in a single language, and better if it has few formatting or artifacts.
+: In SomEnergia, master documents are doc files stored in a given GoogleDrive folder.
+
+Deployed document
+: An specific file derived from one or many master files, adapted by format, language, styling or utilities for the users to access it in an specific platform
+: Example: The html page in the website, the html fragment to be embeded inside a web form, the pdf sent by email, the pdf to be signed by signaturit...
+
+### Constituents of a document
+
+Content
+: The essential content stripped from any layout, style or utility.
+
+Style
+: Design options we can apply to document elements (color, font family, font size, decorations...)
+
+Layout
+: Distribution of the document elements in the available space.
+: Although it is often included as part of the style, here we explicitly discriminate layout and style.
+
+Utilities
+: Functional elements of the document which are not parte of the content itself but help the user to read it
+: Example: Table of content, back links, search widgets, buttons...
+
+Format
+: Type of digital support
+: Example: HTML page, PDF document...
+: Here we avoid using format o formatting to refer to layout or style.
+
+Platform
+: Technological system which makes a document available to the user
+: Examples: Front website, back office, webforms, ERP...
+
+### Systems
+
+Version Control System
+: A system that maintains, documents and integrates changes different people make to a set of files, usually plain text files.
+: We are currently using `git` as VCS within the web platform `github`.
+
+Markdown
+: A richtext format wich reensembles plaintext, specialized to represent content, as opposed to layout or style, which can be converted to multiple formats (html, docx, pdf...)
+
+Translation file
+: A file containing text translations in a single language.
+: Every text piece has a unique identifier to relate the same text piece in different languages.
+: We are using YAML format for translation files and descriptive `UPPER_SNAKE_CASE` for identifiers.
+
+Weblate
+: Webapp to translate texts in git projects.
+: Currently used in SomEnergia to translate any text of any application to the 4 official languages or more
+
+## Pipeline
+
+### Import docx files as markdown
 
 **Master and translations:**
 The normal workflow considers the version of a document in a single original language to be the master to be imported.
@@ -52,14 +117,14 @@ About the output:
     - This is convenient since this improves the diff effectivity but be aware of possible artifacts.
     - Some languages split or merge the sentences in a different way.
 
-## Review md files after import
+### Review md files after import
 
 - Compare imported md files to identify real changes and formatting or import errors
     - Against previous version in git
     - Against same document in other languages
 - TODO: List of usual import errors
 
-## Extracting translation yaml files
+### Extracting translation yaml files
 
 ```bash
 # first time, all languages
@@ -74,7 +139,7 @@ legal-text-processor extract mydocument/es.md
 - Some sentences start with something similar to a clause number generating an extra ID. This has to be corrected by hand.
 - TODO: let the script check the numbering sequence and report inconsistencies
 
-## Extracting template for resynthesizing md's
+### Extracting template for resynthesizing md's
 
 The template is a file specifying how to compose translated texts to rebuild a translated markdown document.
 
@@ -88,7 +153,7 @@ legal-text-processor template mydocument/es.md
 - It will trigger colored messages if a previous `template.md` exists and any clause structure change is detected.
 - This is useful when importing several languages, to spot structure differences among them.
 
-## Resynthesizing md from translations
+### Resynthesizing md from translations
 
 Once translators have translated the new sentences in weblate,
 the following command:
@@ -99,14 +164,15 @@ legal-text-processor reintegrate my_output
 
 It will regenerate markdowns back from the specified translations using the template.
 
-## Generate output documents
+### Generate output documents
 
 TODO: This step is still under heavy development,
 this documentation does not reflect reality
 and reality will surely change.
 
+```bash
 legal-text-processor generate ....
-
+```
 
 
 
