@@ -1,6 +1,6 @@
 ## Deute tècnic
 
-- [ ] Posar els assets a un directori
+- [ ] Posar els assets a un subdirectori
 - [ ] Moure les operacions de gha a un makefile
 - [ ] Fer servir l'acció de notificacio al chat quan falla
 - [ ] Integrar l'script d'importació (bash) a l'script python principal

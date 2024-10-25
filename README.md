@@ -25,6 +25,10 @@ source .venv/bin/activate
 pip install -e .
 ```
 
+**Note:** if your distro ships with pandoc<1.3.1,
+try install deb package from [here](https://github.com/jgm/pandoc/releases/latest)
+
+
 ## Glossary
 
 ### Actors
