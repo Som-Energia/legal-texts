@@ -7,6 +7,7 @@ import re
 import itertools
 from consolemsg import warn, step, error
 import difflib
+from .toc_generator import generate_toc
 
 help="""\
 This CLI tool automates legaltext workflow
@@ -148,6 +149,19 @@ def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", out
         #'--pdf-engine-opt=--pdf-variant=pdf/ua-1',
     ])
 
+def generate_html_fragment(markdown_file: Path, output_html: Path = "output.html"):
+    """
+    Generates html fragmentf from markdown file
+    """
+    import subprocess
+    subprocess.run([
+        'pandoc',
+        str(markdown_file),
+        '-t', 'html',
+        '-o', output_html,
+        '--metadata', 'pagetitle="CHANGE ME"',
+    ])
+
 app = typer.Typer(
     help=help,
 )
@@ -214,6 +228,31 @@ def generate(master_path: Path):
         step(f"Generating {target}...")
         generate_pdf(markdown_file, 'pagedlegaltext.css', target)
 
+@app.command()
+def generate_html(master_path: Path):
+    """Generates a set of deployable files"""
+    from somutils.testutils import temp_path
+    document = master_path.name
+    output_dir.mkdir(exist_ok=True)
+    output_template = 'webforms-{document}-{lang}.html'
+    for markdown_file in master_path.glob('??.md'):
+        lang = markdown_file.stem
+        target = output_dir / output_template.format(
+            document=document,
+            lang=lang,
+        )
+        step(f"Generating TOC")
+        markdown_content = markdown_file.read_text()
+        toc = generate_toc(markdown_content)
+        # Inserta la tabla de content al inicio del archivo
+        content_toc = f"# TABLA DE CONTENIDOS\n\n{toc}\n\n"
+        markdown_with_toc = markdown_content.replace("[TABLE]", content_toc)
+        with temp_path() as temp_dir:
+            toc_markdown_file = temp_dir/f"{lang}.md"
+            toc_markdown_file.write_text(markdown_with_toc)
+
+            step(f"Generating {target}...")
+            generate_html_fragment(toc_markdown_file, target)
 
 if __name__ == "__main__":
     app()

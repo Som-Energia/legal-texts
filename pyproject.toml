@@ -34,6 +34,7 @@ dependencies = [
     'yamlns',
     'typer',
     'consolemsg',
+    'somutils',
 ]
 
 [tool.setuptools.dynamic]
