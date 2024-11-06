@@ -243,7 +243,7 @@ def generate_html(master_path: Path):
         )
         step(f"Generating TOC")
         markdown_content = markdown_file.read_text()
-        toc = generate_toc(markdown_content)
+        toc = generate_toc(markdown_content, top_level = 2)
         # Inserta la tabla de content al inicio del archivo
         content_toc = f"# TABLA DE CONTENIDOS\n\n{toc}\n\n"
         markdown_with_toc = markdown_content.replace("[TABLE]", content_toc)
