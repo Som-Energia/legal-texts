@@ -36,6 +36,7 @@ dependencies = [
     'consolemsg',
     'somutils',
     'pytest-cov',
+    'beautifulsoup4',
 ]
 
 [tool.setuptools.dynamic]

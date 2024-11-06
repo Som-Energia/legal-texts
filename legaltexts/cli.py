@@ -7,7 +7,7 @@ import re
 import itertools
 from consolemsg import warn, step, error
 import difflib
-from .toc_generator import generate_toc
+from .toc_generator import generate_toc, add_links_to_toc
 
 help="""\
 This CLI tool automates legaltext workflow
@@ -252,7 +252,12 @@ def generate_html(master_path: Path):
             toc_markdown_file.write_text(markdown_with_toc)
 
             step(f"Generating {target}...")
-            generate_html_fragment(toc_markdown_file, target)
+            toc_html_file = temp_dir/f'withtoc.html'
+            generate_html_fragment(toc_markdown_file, toc_html_file)
+            html = toc_html_file.read_text()
+            final_content = add_links_to_toc(html, text="Torna a dalt ↑", target="#tabla-de-contenidos")
+            target.write_text(final_content)
+
 
 if __name__ == "__main__":
     app()
