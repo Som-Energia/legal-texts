@@ -8,6 +8,7 @@ import itertools
 from consolemsg import warn, step, error
 import difflib
 from .toc_generator import generate_toc, add_links_to_toc
+from .translate import tr
 
 help="""\
 This CLI tool automates legaltext workflow
@@ -149,7 +150,7 @@ def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", out
         #'--pdf-engine-opt=--pdf-variant=pdf/ua-1',
     ])
 
-def generate_html_fragment(markdown_file: Path, output_html: Path = "output.html"):
+def md_to_html_fragment(markdown_file: Path, output_html: Path = "output.html"):
     """
     Generates html fragmentf from markdown file
     """
@@ -245,17 +246,21 @@ def generate_html(master_path: Path):
         markdown_content = markdown_file.read_text()
         toc = generate_toc(markdown_content, top_level = 2)
         # Inserta la tabla de content al inicio del archivo
-        content_toc = f"# TABLA DE CONTENIDOS\n\n{toc}\n\n"
-        markdown_with_toc = markdown_content.replace("[TABLE]", content_toc)
+        toc_md = f"# {tr(lang, 'TOC_TITLE')}\n\n{toc}\n\n"
+        markdown_with_toc = markdown_content.replace("[TABLE]", toc_md)
         with temp_path() as temp_dir:
             toc_markdown_file = temp_dir/f"{lang}.md"
             toc_markdown_file.write_text(markdown_with_toc)
 
             step(f"Generating {target}...")
             toc_html_file = temp_dir/f'withtoc.html'
-            generate_html_fragment(toc_markdown_file, toc_html_file)
+            md_to_html_fragment(toc_markdown_file, toc_html_file)
             html = toc_html_file.read_text()
-            final_content = add_links_to_toc(html, text="Torna a dalt ↑", target="#tabla-de-contenidos")
+            final_content = add_links_to_toc(
+                html,
+                text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
+                target="#tabla-de-contenidos",
+            )
             target.write_text(final_content)
 
 

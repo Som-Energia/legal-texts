@@ -42,6 +42,9 @@ dependencies = [
 [tool.setuptools.dynamic]
 version = {attr = "legaltexts.__version__"}
 
+[tool.setuptools.package-data]
+"legaltexts.i18n" = ["*.yaml"]
+
 [project.scripts]
 legal-text-processor = "legaltexts.cli:app"
 
