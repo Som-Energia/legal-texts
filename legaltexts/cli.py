@@ -215,7 +215,7 @@ def reintegrate(translation_yaml: list[Path]):
         markdown_file.write_text(content)
 
 @app.command()
-def generate(targets: list[str]):
+def generate(targets: list[str]=[]):
     if not targets or 'web-pdf' in targets:
         generate_web_pdf(
             master_path=Path('indexed-tariff-specific-conditions'),
@@ -247,12 +247,16 @@ def generate_webforms_html(master_path: Path, output_prefix: str):
         lang = markdown_file.stem
         output_template = f'{output_prefix}-{document}-{lang}.html'
         target = output_dir / output_template
-        step(f"Generating TOC")
+        step(f"Generating {target}}")
+
         markdown_content = markdown_file.read_text()
-        toc = generate_toc(markdown_content, top_level = 2)
+        step(f"Generating TOC")
         # Inserta la tabla de content al inicio del archivo
-        toc_md = f"# {tr(lang, 'TOC_TITLE')}\n\n{toc}\n\n"
-        markdown_with_toc = markdown_content.replace("[TABLE]", toc_md)
+        toc = generate_toc(markdown_content, top_level = 2)
+        markdown_with_toc = markdown_content.replace(
+            "[TABLE]",
+            f"# {tr(lang, 'TOC_TITLE')}\n\n{toc}\n\n"
+        )
         with temp_path() as temp_dir:
             toc_markdown_file = temp_dir/f"{lang}.md"
             toc_markdown_file.write_text(markdown_with_toc)
