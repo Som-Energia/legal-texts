@@ -150,7 +150,7 @@ def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", out
         #'--pdf-engine-opt=--pdf-variant=pdf/ua-1',
     ])
 
-def md_to_html_fragment(markdown_file: Path, output_html: Path = "output.html"):
+def md_to_html_fragment(markdown: str)->str:
     """
     Generates html fragmentf from markdown file
     """
@@ -215,13 +215,13 @@ def reintegrate(translation_yaml: list[Path]):
         markdown_file.write_text(content)
 
 @app.command()
-def generate(targets: list[str]=[]):
-    if not targets or 'web-pdf' in targets:
+def generate(target: Annotated[str, typer.Argument()]=''):
+    if not target or target=='web-pdf':
         generate_web_pdf(
             master_path=Path('indexed-tariff-specific-conditions'),
             output_prefix='web-pdf'
         )
-    if not targets or 'webforms' in targets:
+    if not target or target=='webforms':
         generate_webforms_html(
             master_path=Path('general-conditions'),
             output_prefix='webforms'
