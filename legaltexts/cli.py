@@ -215,33 +215,36 @@ def reintegrate(translation_yaml: list[Path]):
         markdown_file.write_text(content)
 
 @app.command()
-def generate(master_path: Path):
+def generate():
+    generate_web_pdf(
+        master_path=Path('indexed-tariff-specific-conditions'),
+        output_prefix='web-pdf'
+    )
+    generate_webforms_html(
+        master_path=Path('general-conditions'),
+        output_prefix='webforms'
+    )
+
+def generate_web_pdf(master_path: Path, output_prefix: str):
     """Generates a set of deployable files"""
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
-    output_template = 'web-pdf-{document}-{lang}.pdf'
     for markdown_file in master_path.glob('??.md'):
         lang = markdown_file.stem
-        target = output_dir / output_template.format(
-            document=document,
-            lang=lang,
-        )
+        output_template = f'{output_prefix}-{document}-{lang}.pdf'
+        target = output_dir / output_template
         step(f"Generating {target}...")
         generate_pdf(markdown_file, 'pagedlegaltext.css', target)
 
-@app.command()
-def generate_html(master_path: Path):
+def generate_webforms_html(master_path: Path, output_prefix: str):
     """Generates a set of deployable files"""
     from somutils.testutils import temp_path
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
-    output_template = 'webforms-{document}-{lang}.html'
     for markdown_file in master_path.glob('??.md'):
         lang = markdown_file.stem
-        target = output_dir / output_template.format(
-            document=document,
-            lang=lang,
-        )
+        output_template = f'{output_prefix}-{document}-{lang}.html'
+        target = output_dir / output_template
         step(f"Generating TOC")
         markdown_content = markdown_file.read_text()
         toc = generate_toc(markdown_content, top_level = 2)

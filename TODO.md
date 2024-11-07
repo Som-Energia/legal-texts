@@ -1,8 +1,11 @@
 ## Deute tècnic
 
-- [ ] Posar els assets a un subdirectori
+
+- [x] TOC strings (title and link text) as translatable
+- [ ] Provar el generat a webforms
+- [ ] Reorganitzar per generate generic
+
 - [ ] Moure les operacions de gha a un makefile
-- [ ] Fer servir l'acció de notificacio al chat quan falla
 - [ ] Integrar l'script d'importació (bash) a l'script python principal
 - [ ] Generalitzar la reintegració (processar tots els masters que tenen un template.md)
 - [ ] Generalitzar la generació per declarativament definir:
@@ -12,6 +15,8 @@
     - Paràmetres
 - [ ] En la extracció comprovar que la numeració és consecutiva
 
+- [x] Posar els assets a un subdirectori
+- [x] Fer servir l'acció de notificacio al chat quan falla
 
 ## Pending unknowns
 
