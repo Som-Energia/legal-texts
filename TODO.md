@@ -1,9 +1,14 @@
 ## Deute tècnic
 
-
-- [x] TOC strings (title and link text) as translatable
+- [ ] El TOC del document del webforms no te titol (Taula de continguts)
+- [ ] Target del TOC ha de ser també multi idioma (o insertem el target de toc a mà)
+- [ ] Fix items in general-conditions
 - [ ] Provar el generat a webforms
-- [ ] Reorganitzar per generate generic
+- [ ] Links in a different window
+- [ ] import general-conditions in different languages
+- [ ] Create a weblate project for general-conditions
+- [ ] Combined webform output for general-conditions and indexed
+
 
 - [ ] Moure les operacions de gha a un makefile
 - [ ] Integrar l'script d'importació (bash) a l'script python principal
@@ -15,6 +20,8 @@
     - Paràmetres
 - [ ] En la extracció comprovar que la numeració és consecutiva
 
+- [x] TOC strings (title and link text) as translatable
+- [x] Reorganitzar per generate generic
 - [x] Posar els assets a un subdirectori
 - [x] Fer servir l'acció de notificacio al chat quan falla
 
@@ -25,8 +32,8 @@
 - [ ] Given a markdown how to properly format into html selfcontained
 - [ ] Given a markdown how to properly format into html embeded
 - [ ] HTML: How to make links to open in a different windows in html
-- [ ] HTML: How to generate the TOC
-- [ ] HTML: Backlinks
+- [x] HTML: How to generate the TOC
+- [x] HTML: Backlinks
 - [x] PDF: CSS Styling
 - [x] PDF: how to generate TOC metadata
 - [x] PDF: Page header
