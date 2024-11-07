@@ -5,16 +5,16 @@ from bs4 import BeautifulSoup
 def add_links_to_toc(html, text, target="#toc"):
     """
     >>> add_links_to_toc('<h2>Titol</h2>', text='Torna a dalt')
-    '<h2>Titol<a href="#toc">Torna a dalt</a></h2>'
+    '<h2>Titol<span class="pujar"> - <a href="#toc">Torna a dalt</a></span></h2>'
 
     >>> add_links_to_toc('<h3>Titol</h3>', text='Torna a dalt')
-    '<h3>Titol<a href="#toc">Torna a dalt</a></h3>'
+    '<h3>Titol<span class="pujar"> - <a href="#toc">Torna a dalt</a></span></h3>'
 
     >>> add_links_to_toc('<h3>Titol</h3>', text='Go up')
-    '<h3>Titol<a href="#toc">Go up</a></h3>'
+    '<h3>Titol<span class="pujar"> - <a href="#toc">Go up</a></span></h3>'
 
     >>> add_links_to_toc('<h3>Titol</h3>', text='Torna a dalt', target="#target")
-    '<h3>Titol<a href="#target">Torna a dalt</a></h3>'
+    '<h3>Titol<span class="pujar"> - <a href="#target">Torna a dalt</a></span></h3>'
     """
     soup = BeautifulSoup(html, features="html.parser")
     headers = sum((
@@ -22,7 +22,7 @@ def add_links_to_toc(html, text, target="#toc"):
         for l in range(2,7)
     ), [])
     for header in headers:
-        uplink = BeautifulSoup("<span class='pujar'> - <a href='#toc' /></span>", features="html.parser")
+        uplink = BeautifulSoup(f"<span class='pujar'> - <a href='{target}' /></span>", features="html.parser")
         uplink.find('a').string = text
         header.append(uplink)
     return str(soup)
