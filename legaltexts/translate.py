@@ -11,7 +11,6 @@ def build_translations():
         lang = translation_file.stem
         translations[lang] = ns.loads(translation_file.read_text())
     build_translations.translations = translations
-    print(build_translations.translations)
     return build_translations.translations
 
 def tr(lang, text, *args, **kwds):
