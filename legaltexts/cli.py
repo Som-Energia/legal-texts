@@ -247,10 +247,10 @@ def generate_webforms_html(master_path: Path, output_prefix: str):
         lang = markdown_file.stem
         output_template = f'{output_prefix}-{document}-{lang}.html'
         target = output_dir / output_template
-        step(f"Generating {target}}")
+        step(f"Generating {target}")
 
         markdown_content = markdown_file.read_text()
-        step(f"Generating TOC")
+        step(f"  Generating TOC")
         # Inserta la tabla de content al inicio del archivo
         toc = generate_toc(markdown_content, top_level = 2)
         markdown_with_toc = markdown_content.replace(
@@ -261,7 +261,7 @@ def generate_webforms_html(master_path: Path, output_prefix: str):
             toc_markdown_file = temp_dir/f"{lang}.md"
             toc_markdown_file.write_text(markdown_with_toc)
 
-            step(f"Generating {target}...")
+            step(f"  Generating html...")
             toc_html_file = temp_dir/f'withtoc.html'
             md_to_html_fragment(toc_markdown_file, toc_html_file)
             html = toc_html_file.read_text()
