@@ -166,6 +166,7 @@ def md_to_html_fragment(markdown: str)->str:
             str(markdown_file),
             '-t', 'html',
             '-o', output_html,
+            '--wrap=preserve',
         ])
         return output_html.read_text()
 

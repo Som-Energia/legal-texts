@@ -15,7 +15,7 @@ def add_links_to_toc(html, text, target="#toc"):
     >>> add_links_to_toc('<h3>Titol</h3>', text='Torna a dalt', target="#target")
     '<h3>Titol<span class="pujar"> - <a href="#target">Torna a dalt</a></span></h3>'
     """
-    soup = BeautifulSoup(html, features="html.parser")
+    soup = BeautifulSoup(html, features="html.parser", preserve_whitespace_tags={'p', 'li'})
     headers = sum((
         soup.find_all(f'h{l}')
         for l in range(2,7)
@@ -24,7 +24,7 @@ def add_links_to_toc(html, text, target="#toc"):
         uplink = BeautifulSoup(f"<span class='pujar'> - <a href='{target}' /></span>", features="html.parser")
         uplink.find('a').string = text
         header.append(uplink)
-    return str(soup)
+    return soup.prettify(formatter=None)
 
 def generate_toc(markdown_text, top_level=None, bottom_level=None, title=None):
     """
