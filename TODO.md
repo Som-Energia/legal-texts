@@ -2,7 +2,7 @@
 
 - [ ] El TOC del document del webforms no te titol (Taula de continguts)
 - [ ] Target del TOC ha de ser també multi idioma (o insertem el target de toc a mà)
-- [ ] Fix items in general-conditions
+- [ ] Las listas del general conditions estan rotas la mayoria
 - [ ] Provar el generat a webforms
 - [ ] Links in a different window
 - [ ] import general-conditions in different languages

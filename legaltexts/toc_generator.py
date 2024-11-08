@@ -1,7 +1,6 @@
 import re
 from bs4 import BeautifulSoup
 
-
 def add_links_to_toc(html, text, target="#toc"):
     """
     >>> add_links_to_toc('<h2>Titol</h2>', text='Torna a dalt')
@@ -27,7 +26,7 @@ def add_links_to_toc(html, text, target="#toc"):
         header.append(uplink)
     return str(soup)
 
-def generate_toc(markdown_text, top_level=None, bottom_level=None):
+def generate_toc(markdown_text, top_level=None, bottom_level=None, title=None):
     """
     >>> md = (
     ...     "Ignored\\n"
@@ -45,8 +44,12 @@ def generate_toc(markdown_text, top_level=None, bottom_level=None):
     >>> generate_toc(md, bottom_level=2)
     '- [1. level 1](#level-1)\\n  - [1.1. level 2](#level-2)'
 
+    >>> generate_toc(md, title="Index")
+    '# Index\\n\\n- [1. level 1](#level-1)\\n  - [1.1. level 2](#level-2)\\n    - [1.1.1. level 3](#level-3)'
+
     """
     top_level = top_level or 1
+    toc_title = f"# {title}\n\n" if title else ''
     toc = []
     for linia in markdown_text.splitlines():
         header = re.match(r"^(#{1,6})\s+((?:\d+[.])+)\s+(.*)", linia)
@@ -60,23 +63,32 @@ def generate_toc(markdown_text, top_level=None, bottom_level=None):
         # Crea el link del titol
         link = title.lower().replace(" ", "-").replace(".", "").replace(",", "")
         toc.append(f"{'  ' * (level - top_level)}- [{numbers} {title}](#{link})")
-    return "\n".join(toc)
+    return toc_title + "\n".join(toc)
 
-def main():
-    # Lee el archivo Markdown
-    with open("es_tmp.md", "r", encoding="utf-8") as file:
-        content = file.read()
+def add_markdown_toc(
+    original_md: str,
+    title: str|None=None,
+    place_holder:str = '',
+    top_level: int = 0,
+):
+    """
+    >>> md = (
+    ...     "[TOC]\\n"
+    ...     "# 1. level 1\\n"
+    ...     )
 
-    # Genera la tabla de content
-    toc = generate_toc(content)
+    >>> add_markdown_toc(md)
+    '- [1. level 1](#level-1)\\n\\n[TOC]\\n# 1. level 1\\n'
+    >>> add_markdown_toc(md, place_holder='[TOC]')
+    '- [1. level 1](#level-1)\\n# 1. level 1\\n'
+    >>> add_markdown_toc(md, place_holder='[BAD]')
+    '- [1. level 1](#level-1)\\n\\n[TOC]\\n# 1. level 1\\n'
+    """
+    toc = generate_toc(original_md, top_level = top_level, title=title)
+    if place_holder and place_holder in original_md:
+        return original_md.replace(place_holder, toc)
+    return '\n\n'.join([toc, original_md])
 
-    # Inserta la tabla de content al inicio del archivo
-    content_toc = f"# TABLA DE CONTENIDOS\n\n{toc}\n\n"
-    mod_content = content.replace("[TABLE]", content_toc)
-
-    # Guarda el nuevo archivo con la TOC agregada
-    with open("es.md", "w", encoding="utf-8") as file:
-        file.write(mod_content)
 
 if __name__ == "__main__":
     main()

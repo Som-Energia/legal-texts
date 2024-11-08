@@ -7,8 +7,9 @@ import re
 import itertools
 from consolemsg import warn, step, error
 import difflib
-from .toc_generator import generate_toc, add_links_to_toc
+from .toc_generator import add_markdown_toc, add_links_to_toc
 from .translate import tr
+from typing_extensions import Annotated
 
 help="""\
 This CLI tool automates legaltext workflow
@@ -155,13 +156,18 @@ def md_to_html_fragment(markdown: str)->str:
     Generates html fragmentf from markdown file
     """
     import subprocess
-    subprocess.run([
-        'pandoc',
-        str(markdown_file),
-        '-t', 'html',
-        '-o', output_html,
-        '--metadata', 'pagetitle="CHANGE ME"',
-    ])
+    from somutils.testutils import temp_path
+    with temp_path() as tmp:
+        markdown_file = tmp/f"input.md"
+        output_html = tmp/'output.html'
+        markdown_file.write_text(markdown)
+        subprocess.run([
+            'pandoc',
+            str(markdown_file),
+            '-t', 'html',
+            '-o', output_html,
+        ])
+        return output_html.read_text()
 
 app = typer.Typer(
     help=help,
@@ -228,7 +234,7 @@ def generate(target: Annotated[str, typer.Argument()]=''):
         )
 
 def generate_web_pdf(master_path: Path, output_prefix: str):
-    """Generates a set of deployable files"""
+    """Generates a pdf for the website"""
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
     for markdown_file in master_path.glob('??.md'):
@@ -239,8 +245,7 @@ def generate_web_pdf(master_path: Path, output_prefix: str):
         generate_pdf(markdown_file, 'pagedlegaltext.css', target)
 
 def generate_webforms_html(master_path: Path, output_prefix: str):
-    """Generates a set of deployable files"""
-    from somutils.testutils import temp_path
+    """Generates an html fragment to be included in webforms LegalText view"""
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
     for markdown_file in master_path.glob('??.md'):
@@ -249,28 +254,31 @@ def generate_webforms_html(master_path: Path, output_prefix: str):
         target = output_dir / output_template
         step(f"Generating {target}")
 
+        step(f"  Reading {markdown_file}...")
         markdown_content = markdown_file.read_text()
-        step(f"  Generating TOC")
-        # Inserta la tabla de content al inicio del archivo
-        toc = generate_toc(markdown_content, top_level = 2)
-        markdown_with_toc = markdown_content.replace(
-            "[TABLE]",
-            f"# {tr(lang, 'TOC_TITLE')}\n\n{toc}\n\n"
-        )
-        with temp_path() as temp_dir:
-            toc_markdown_file = temp_dir/f"{lang}.md"
-            toc_markdown_file.write_text(markdown_with_toc)
 
-            step(f"  Generating html...")
-            toc_html_file = temp_dir/f'withtoc.html'
-            md_to_html_fragment(toc_markdown_file, toc_html_file)
-            html = toc_html_file.read_text()
-            final_content = add_links_to_toc(
-                html,
-                text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
-                target="#tabla-de-contenidos",
-            )
-            target.write_text(final_content)
+        step(f"  Generating TOC")
+        markdown_with_toc = add_markdown_toc(
+            markdown_content,
+            place_holder='[TABLE]',
+            title=tr(lang, 'TOC_TITLE'),
+            top_level=2,
+        )
+
+        step(f"  Generating html...")
+        html = md_to_html_fragment(markdown_with_toc)
+
+        step(f"  Adding up-links...")
+        top="<span id='top'></span>\n\n"
+        final_content = top+add_links_to_toc(
+            html,
+            text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
+            target="#top",
+        )
+
+        step(f"  Writing output")
+        target.write_text(final_content)
+
 
 
 if __name__ == "__main__":
