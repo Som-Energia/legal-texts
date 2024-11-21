@@ -28,7 +28,7 @@ jobs:
       - name: 🔧 Build
         run: |
           legal-text-processor reintegrate indexed-tariff-specific-conditions/??.yaml
-          legal-text-processor generate indexed-tariff-specific-conditions/
+          legal-text-processor generate
 
       - name: 📂 Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@v4.0.0

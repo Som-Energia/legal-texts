@@ -18,7 +18,7 @@ process() {
 
 	step "Processing language $lang"
 
-	pandoc "$1" -o $lang.md --columns 80000 -t gfm-raw_html
+	pandoc "$1" -o $lang.md --columns 80000 -t gfm-raw_html	
 
 	# Break paragraphs by phrases
 	sed -i 's/\([^0-9]\.\) /\1\n/g' $lang.md

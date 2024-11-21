@@ -7,6 +7,9 @@ import re
 import itertools
 from consolemsg import warn, step, error
 import difflib
+from .toc_generator import add_markdown_toc, add_links_to_toc
+from .translate import tr
+from typing_extensions import Annotated
 
 help="""\
 This CLI tool automates legaltext workflow
@@ -148,6 +151,25 @@ def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", out
         #'--pdf-engine-opt=--pdf-variant=pdf/ua-1',
     ])
 
+def md_to_html_fragment(markdown: str)->str:
+    """
+    Generates html fragmentf from markdown file
+    """
+    import subprocess
+    from somutils.testutils import temp_path
+    with temp_path() as tmp:
+        markdown_file = tmp/f"input.md"
+        output_html = tmp/'output.html'
+        markdown_file.write_text(markdown)
+        subprocess.run([
+            'pandoc',
+            str(markdown_file),
+            '-t', 'html',
+            '-o', output_html,
+            '--wrap=preserve',
+        ])
+        return output_html.read_text()
+
 app = typer.Typer(
     help=help,
 )
@@ -200,19 +222,64 @@ def reintegrate(translation_yaml: list[Path]):
         markdown_file.write_text(content)
 
 @app.command()
-def generate(master_path: Path):
-    """Generates a set of deployable files"""
+def generate(target: Annotated[str, typer.Argument()]=''):
+    if not target or target=='web-pdf':
+        generate_web_pdf(
+            master_path=Path('indexed-tariff-specific-conditions'),
+            output_prefix='web-pdf'
+        )
+    if not target or target=='webforms':
+        generate_webforms_html(
+            master_path=Path('general-conditions'),
+            output_prefix='webforms'
+        )
+
+def generate_web_pdf(master_path: Path, output_prefix: str):
+    """Generates a pdf for the website"""
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
-    output_template = 'web-pdf-{document}-{lang}.pdf'
     for markdown_file in master_path.glob('??.md'):
         lang = markdown_file.stem
-        target = output_dir / output_template.format(
-            document=document,
-            lang=lang,
-        )
+        output_template = f'{output_prefix}-{document}-{lang}.pdf'
+        target = output_dir / output_template
         step(f"Generating {target}...")
         generate_pdf(markdown_file, 'pagedlegaltext.css', target)
+
+def generate_webforms_html(master_path: Path, output_prefix: str):
+    """Generates an html fragment to be included in webforms LegalText view"""
+    document = master_path.name
+    output_dir.mkdir(exist_ok=True)
+    for markdown_file in master_path.glob('??.md'):
+        lang = markdown_file.stem
+        output_template = f'{output_prefix}-{document}-{lang}.html'
+        target = output_dir / output_template
+        step(f"Generating {target}")
+
+        step(f"  Reading {markdown_file}...")
+        markdown_content = markdown_file.read_text()
+
+        step(f"  Generating TOC")
+        markdown_with_toc = add_markdown_toc(
+            markdown_content,
+            place_holder='[TABLE]',
+            title=tr(lang, 'TOC_TITLE'),
+            top_level=2,
+        )
+
+        step(f"  Generating html...")
+        html = md_to_html_fragment(markdown_with_toc)
+
+        step(f"  Adding up-links...")
+        top="<span id='top'></span>\n\n"
+        final_content = top+add_links_to_toc(
+            html,
+            text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
+            target="#top",
+        )
+
+        step(f"  Writing output")
+        target.write_text(final_content)
+
 
 
 if __name__ == "__main__":

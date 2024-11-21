@@ -34,10 +34,16 @@ dependencies = [
     'yamlns',
     'typer',
     'consolemsg',
+    'somutils',
+    'pytest-cov',
+    'beautifulsoup4',
 ]
 
 [tool.setuptools.dynamic]
 version = {attr = "legaltexts.__version__"}
+
+[tool.setuptools.package-data]
+"legaltexts.i18n" = ["*.yaml"]
 
 [project.scripts]
 legal-text-processor = "legaltexts.cli:app"
@@ -57,6 +63,6 @@ branch = true
 omit = ["**/*test.py"]
 
 [tool.pytest.ini_options]
-addopts = "--doctest-modules --cov=backend"
+addopts = "--doctest-modules --cov=legaltexts"
 
 
