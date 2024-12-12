@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import typer
-from yamlns import ns
+import yaml
 from pathlib import Path
 import re
 import itertools
@@ -129,7 +129,7 @@ def diff(old_file: Path, newcontent: list[str]):
     )
     return ''.join(difflines)
 
-def generate_pdf(markdown_file: Path, css_file: Path = "pagedlegaltext.css", output_pdf: Path = "output.pdf"):
+def generate_pdf_file(markdown_file: Path, css_file: Path = "pagedlegaltext.css", output_pdf: Path = "output.pdf"):
     """
     Generates pdf from markdown file
     """
@@ -211,31 +211,39 @@ def template(markdown_file: list[Path]):
 @app.command()
 def reintegrate(translation_yaml: list[Path]):
     """Reconstructs markdown files from translation yamls."""
-    for yaml_file in translation_yaml:
-        ensure_extension(yaml_file, '.yaml')
-        markdown_file = yaml_file.with_suffix('.md')
-        template_file = yaml_file.parent/'template.md'
-        step(f"Generating {markdown_file} from {yaml_file} and {template_file}")
-        translation = ns.load(yaml_file)
-        template = (yaml_file.parent/'template.md').read_text()
+    for yaml_file_name in translation_yaml:
+        ensure_extension(yaml_file_name, '.yaml')
+        markdown_file = yaml_file_name.with_suffix('.md')
+        template_file = yaml_file_name.parent/'template.md'
+        step(f"Generating {markdown_file} from {yaml_file_name} and {template_file}")
+        translation = yaml.safe_load(open(yaml_file_name, 'r'))
+        template = (yaml_file_name.parent/'template.md').read_text()
         content = template.format(**translation)
         markdown_file.write_text(content)
 
 @app.command()
-def generate(target: Annotated[str, typer.Argument()]=''):
-    if not target or target=='web-pdf':
-        generate_web_pdf(
-            master_path=Path('indexed-tariff-specific-conditions'),
-            output_prefix='web-pdf'
+def generate(
+    input_dir: Annotated[str, typer.Argument(help="Input directory (name of weblate directory)")]='',
+    output_prefix: Annotated[str, typer.Option(help='Optional prefix for output files')]='output',
+    target_type: Annotated[str, typer.Option(help='html or pdf output')]='html',
+    with_toc: Annotated[bool, typer.Option("--with_toc")]=False
+    ):
+    if target_type=='pdf':
+        generate_pdf(
+            Path(input_dir),
+            output_prefix
         )
-    if not target or target=='webforms':
-        generate_webforms_html(
-            master_path=Path('general-conditions'),
-            output_prefix='webforms'
+    if target_type=='html':
+        generate_html(
+            Path(input_dir),
+            output_prefix,
+            with_toc
         )
+    if not input_dir:
+        print(f"Input directory should be especified")
 
-def generate_web_pdf(master_path: Path, output_prefix: str):
-    """Generates a pdf for the website"""
+def generate_pdf(master_path: Path, output_prefix: str):
+    """Generates a pdf"""
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
     for markdown_file in master_path.glob('??.md'):
@@ -243,10 +251,10 @@ def generate_web_pdf(master_path: Path, output_prefix: str):
         output_template = f'{output_prefix}-{document}-{lang}.pdf'
         target = output_dir / output_template
         step(f"Generating {target}...")
-        generate_pdf(markdown_file, 'pagedlegaltext.css', target)
+        generate_pdf_file(markdown_file, 'pagedlegaltext.css', target)
 
-def generate_webforms_html(master_path: Path, output_prefix: str):
-    """Generates an html fragment to be included in webforms LegalText view"""
+def generate_html(master_path: Path, output_prefix: str, with_toc: bool = False):
+    """Generates an html fragment"""
     document = master_path.name
     output_dir.mkdir(exist_ok=True)
     for markdown_file in master_path.glob('??.md'):
@@ -258,24 +266,29 @@ def generate_webforms_html(master_path: Path, output_prefix: str):
         step(f"  Reading {markdown_file}...")
         markdown_content = markdown_file.read_text()
 
-        step(f"  Generating TOC")
-        markdown_with_toc = add_markdown_toc(
-            markdown_content,
-            place_holder='[TABLE]',
-            title=tr(lang, 'TOC_TITLE'),
-            top_level=2,
-        )
+        if with_toc:
+            step(f"  Generating TOC")
+            markdown_with_toc = add_markdown_toc(
+                markdown_content,
+                place_holder='[TABLE]',
+                title=tr(lang, 'TOC_TITLE'),
+                top_level=2,
+            )
+            step(f"  Generating html...")
+            html = md_to_html_fragment(markdown_with_toc)
+        else:
+            step(f"  Generating html...")
+            html = md_to_html_fragment(markdown_content)
 
-        step(f"  Generating html...")
-        html = md_to_html_fragment(markdown_with_toc)
-
-        step(f"  Adding up-links...")
-        top="<span id='top'></span>\n\n"
-        final_content = top+add_links_to_toc(
-            html,
-            text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
-            target="#top",
-        )
+        final_content = html
+        if with_toc:
+            step(f"  Adding up-links...")
+            top=f"<span id={document}-top></span>\n\n"
+            final_content = top+add_links_to_toc(
+                html,
+                text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
+                target=f"#{document}-top",
+            )
 
         step(f"  Writing output")
         target.write_text(final_content)
