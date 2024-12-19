@@ -46,7 +46,7 @@ Master document
 : In SomEnergia, master documents are doc files stored in a given GoogleDrive folder.
 
 Deployed document
-: An specific file derived from one or many master files, adapted by format, language, styling or utilities for the users to access it in an specific platform
+: An specific file derived from one master file, adapted by format, language, styling or utilities for the users to access it in an specific platform
 : Example: The html page in the website, the html fragment to be embeded inside a web form, the pdf sent by email, the pdf to be signed by signaturit...
 
 ### Constituents of a document
@@ -107,7 +107,8 @@ Still having docx files for several languages to be imported has sense in the fo
 Procedure:
 
 - Obtain the master docx files
-- Ensure the docx files have language markers in its name (CA, ES, EU or GL/GA, in uppercase)
+- Ensure the docx files have language markers in its name (CA, ES, EU or GL/GA, in uppercase. For example my-document_ES.docx)
+- Ensure the docx files have title as **Heading 1** (Encapçelament 1) and chapters as **Heading 2** (Encapçelament 2)
 - Create a folder in this project for the document, say: `my-document/`.
 - Enter the folder and execute `import_docx.sh` passing the docx to be imported as parameters
 - This will generate `my-document/<lang>.md`
@@ -121,39 +122,27 @@ About the output:
     - This is convenient since this improves the diff effectivity but be aware of possible artifacts.
     - Some languages split or merge the sentences in a different way.
 
-### Review md files after import
-
-- Compare imported md files to identify real changes and formatting or import errors
-    - Against previous version in git
-    - Against same document in other languages
-- TODO: List of usual import errors
-
 ### Extracting translation yaml files
 
 ```bash
-# first time, all languages
-legal-text-processor extract mydocument/??.md
-# successive, just the reference one
-legal-text-processor extract mydocument/es.md
+# just the reference one for example my-document/es.md
+legal-text-processor extract my-document/es.md
 ```
 
-- Generates `mydocument/??.yaml` containing the translation
+- Generates `my-document/??.yaml` containing the translation
 - This is done by identifying numbered titles and clauses
 - Translation ID's are based on the title/clause numbering, not the content
 - Some sentences start with something similar to a clause number generating an extra ID. This has to be corrected by hand.
-- TODO: let the script check the numbering sequence and report inconsistencies
 
 ### Extracting template for resynthesizing md's
 
 The template is a file specifying how to compose translated texts to rebuild a translated markdown document.
 
 ```bash
-# first time, all languages
-legal-text-processor template mydocument/??.md
-# successive, just the reference one
-legal-text-processor template mydocument/es.md
+# just the reference one
+legal-text-processor template my-document/es.md
 ```
-- This generates `mydocument/template.md`.
+- This generates `my-document/template.md`.
 - It will trigger colored messages if a previous `template.md` exists and any clause structure change is detected.
 - This is useful when importing several languages, to spot structure differences among them.
 
@@ -163,21 +152,24 @@ Once translators have translated the new sentences in weblate,
 the following command:
 
 ```bash
-legal-text-processor reintegrate my_output
+legal-text-processor reintegrate my-document/{lang}.yaml (reeplace lang by es or ca or ...)
 ```
 
 It will regenerate markdowns back from the specified translations using the template.
 
 ### Generate output documents
 
-TODO: This step is still under heavy development,
-this documentation does not reflect reality
-and reality will surely change.
+This script generates the output document in pdf or html format in directory 'output' for all transaltions presents in my-document directory (trasnlations are yaml files obtained in previues step).
 
 ```bash
-legal-text-processor generate ....
+legal-text-processor generate ...
 ```
 
+Parameters for this script are:
+    **input_dir**: Input directory of the transaltions, yamls for each translated language
+    **output_prefix**: Prefix for output files, by default 'output'
+    **target_type**: html or pdf, by default 'html'
+    **with_toc**: To add an index table ONLY for html files, by default False. TOC is generated automatically (ONLY if TABLE placeholrder is present in the tanslation yaml) from each section
 
 
 
