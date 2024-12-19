@@ -107,7 +107,8 @@ Still having docx files for several languages to be imported has sense in the fo
 Procedure:
 
 - Obtain the master docx files
-- Ensure the docx files have language markers in its name (CA, ES, EU or GL/GA, in uppercase)
+- Ensure the docx files have language markers in its name (CA, ES, EU or GL/GA, in uppercase. For example my-document_ES.docx)
+- Ensure the docx files have title as **Heading 1** (Encapçelament 1) and chapters as **Heading 2** (Encapçelament 2)
 - Create a folder in this project for the document, say: `my-document/`.
 - Enter the folder and execute `import_docx.sh` passing the docx to be imported as parameters
 - This will generate `my-document/<lang>.md`
