@@ -1,0 +1,6 @@
+PyYAML
+typer
+consolemsg
+somutils
+pytest-cov
+beautifulsoup4

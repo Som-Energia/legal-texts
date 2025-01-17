@@ -2,13 +2,19 @@
 
 import typer
 import yaml
+from collections import OrderedDict
 from pathlib import Path
 import re
 import itertools
 from consolemsg import warn, step, error
 import difflib
-from .toc_generator import add_markdown_toc, add_links_to_toc
-from .translate import tr
+try:
+    import translate
+    import toc_generator
+except ImportError:
+    from . import translate
+    from . import toc_generator
+
 from typing_extensions import Annotated
 
 help="""\
@@ -30,6 +36,14 @@ mydocument/XX.yaml -> reintegrate  ->  mydocument/XX.md
 mydocument/XX.md -> generate -> output/mydocument.XX.pdf/html/...
 
 """
+
+def represent_dictionary_order(self, dict_data):
+    return self.represent_mapping('tag:yaml.org,2002:map', dict_data.items())
+
+def setup_yaml():
+    yaml.add_representer(OrderedDict, represent_dictionary_order)
+
+setup_yaml()
 
 output_dir = Path(__file__).parent.parent/'output'
 if output_dir.is_relative_to(Path.cwd()):
@@ -87,7 +101,7 @@ def extract_translations(blocks):
     """
     Organized list of blocks into translation dictionary
     """
-    yaml = ns()
+    yaml = OrderedDict()
     active_id = "PRE"
     for block in blocks:
         new_id = extract_id(block)
@@ -97,7 +111,7 @@ def extract_translations(blocks):
         yaml.setdefault(active_id, [])
         yaml[active_id].append(block)
 
-    return ns((
+    return OrderedDict((
         (id, join_blocks(content))
         for id, content in yaml.items()
     ))
@@ -186,7 +200,8 @@ def extract(markdown_file: list[Path]):
         ensure_extension(md_file, '.md')
         blocks = analyze_blocks(md_file.open())
         result = extract_translations(blocks)
-        result.dump(md_file.with_suffix(".yaml"))
+        with open(md_file.with_suffix(".yaml"), 'w') as outputfile:
+            yaml.dump(result, outputfile)
 
 @app.command()
 def template(markdown_file: list[Path]):
@@ -226,7 +241,7 @@ def generate(
     input_dir: Annotated[str, typer.Argument(help="Input directory (name of weblate directory)")]='',
     output_prefix: Annotated[str, typer.Option(help='Optional prefix for output files')]='output',
     target_type: Annotated[str, typer.Option(help='html or pdf output')]='html',
-    with_toc: Annotated[bool, typer.Option("--with_toc")]=False
+    with_toc: Annotated[bool, typer.Option(help='With TOC')]=False
     ):
     if target_type=='pdf':
         generate_pdf(
@@ -268,10 +283,10 @@ def generate_html(master_path: Path, output_prefix: str, with_toc: bool = False)
 
         if with_toc:
             step(f"  Generating TOC")
-            markdown_with_toc = add_markdown_toc(
+            markdown_with_toc = toc_generator.add_markdown_toc(
                 markdown_content,
                 place_holder='[TABLE]',
-                title=tr(lang, 'TOC_TITLE'),
+                title=translate.tr(lang, 'TOC_TITLE'),
                 top_level=2,
             )
             step(f"  Generating html...")
@@ -284,9 +299,9 @@ def generate_html(master_path: Path, output_prefix: str, with_toc: bool = False)
         if with_toc:
             step(f"  Adding up-links...")
             top=f"<span id={document}-top></span>\n\n"
-            final_content = top+add_links_to_toc(
+            final_content = top+toc_generator.add_links_to_toc(
                 html,
-                text=f"{tr(lang, 'TOC_GO_TO_TOC')} ↑",
+                text=f"{translate.tr(lang, 'TOC_GO_TO_TOC')} ↑",
                 target=f"#{document}-top",
             )
 
