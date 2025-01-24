@@ -16,18 +16,16 @@ process() {
 	# fix lang code for ga -> gl
 	[ "$lang" = 'ga' ] && lang='gl'
 
-	step "Processing language $lang"
+	step "Processing language $lang in $2"
 
-	pandoc "$1" -o $lang.md --columns 80000 -t gfm-raw_html	
+	pandoc "$1" -o "$2"/$lang.md --columns 80000 -t gfm-raw_html
 
 	# Break paragraphs by phrases
-	sed -i 's/\([^0-9]\.\) /\1\n/g' $lang.md
+	sed -i 's/\([^0-9]\.\) /\1\n/g' "$2"/$lang.md
 	# Fix subscripts
-	sed -i 's/_(\([^)][^)]*\))/~\1~/g' $lang.md
+	sed -i 's/_(\([^)][^)]*\))/~\1~/g' "$2"/$lang.md
 }
 
-for a in "$@"; do
-	process "$a"
-done
+process "$@"
 
 

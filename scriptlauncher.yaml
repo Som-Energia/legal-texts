@@ -1,0 +1,71 @@
+legaltexts:
+
+  description: Legal texts process
+  scripts:
+
+    import-docxs:
+      script: SOME_SRC/legal-texts/import_docx.sh {docx} SOME_SRC/legal-texts/{folder}
+      title: Import docx a md
+      description: >
+        Import fitxers docx a md
+      parameters:
+        docx:
+          description: Introdueix el nom del fitxer docx a processar.
+        folder:
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+
+    legal-text-processor-extract:
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py extract SOME_SRC/legal-texts/{folder}/{md}
+      title: Extraer traduccions en format yaml
+      description: >
+        Extrear la correspondiente traducció segons el fitxer md
+      parameters:
+        md:
+          description: Introdueix el nom del fitxer md a processar.
+        folder:
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+
+    legal-text-processor-template:
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py template SOME_SRC/legal-texts/{folder}/{md}
+      title: Extraer plantilla
+      description: >
+        Extraer plantilla amb claus de paragraphs a traduir
+      parameters:
+        md:
+          description: Introdueix el nom del fitxer md a processar.
+        folder:
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+
+    legal-text-processor-reintegrate:
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py reintegrate SOME_SRC/legal-texts/{folder}/{yaml}
+      title: Reintegrar traduccions
+      description: >
+        Una vegada fetes les traduccions aquest script regenera els fitxer md corresponent a la traducció utilitzant la plantilla de paragraphs.
+      parameters:
+        yaml:
+          description: Introdueix el nom del fitxer yaml a processar.
+        folder:
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+
+    legal-text-processor-generate:
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py generate SOME_SRC/legal-texts/{input_dir} --output-prefix={output-prefix} --target-type={target-type} {with-toc}
+      title: Generar documents de sortida
+      description: >
+        Genera els documents de sortida en pdf o html en el directory 'output' per a totes les traduccions presents (fitxers {language}.yaml) en la carpeta del document.
+      parameters:
+        input_dir:
+          description: Carpeta on es troben totes les traduccions (fitxers yaml, per exemple es.yaml, ca.yaml, ...).
+        output-prefix:
+          description: Prefix pels fitxers de sortida.
+          default: 'output'
+        target-type:
+          description: html o pdf
+          default: 'html'
+        with-toc:
+          description: Afegeixe un index d'items. SOLAMENT per a fitxers html. L'index es generat automàticamnet NOMES si el placeholder TABLE es present en el fitxer yaml. 
+          type: enum
+          options:
+            Amb index: --with-toc
+            Sense index: --no-with-toc
+          default: --no-with-toc
+
