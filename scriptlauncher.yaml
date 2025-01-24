@@ -12,10 +12,10 @@ legaltexts:
         docx:
           description: Introdueix el nom del fitxer docx a processar.
         folder:
-          description: Introdueix el non de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
 
     legal-text-processor-extract:
-      script: /home/marite/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py extract SOME_SRC/legal-texts/{folder}/{md}
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py extract SOME_SRC/legal-texts/{folder}/{md}
       title: Extraer traduccions en format yaml
       description: >
         Extrear la correspondiente traducció segons el fitxer md
@@ -23,10 +23,10 @@ legaltexts:
         md:
           description: Introdueix el nom del fitxer md a processar.
         folder:
-          description: Introdueix el non de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
 
     legal-text-processor-template:
-      script: /home/marite/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py template SOME_SRC/legal-texts/{folder}/{md}
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py template SOME_SRC/legal-texts/{folder}/{md}
       title: Extraer plantilla
       description: >
         Extraer plantilla amb claus de paragraphs a traduir
@@ -34,10 +34,10 @@ legaltexts:
         md:
           description: Introdueix el nom del fitxer md a processar.
         folder:
-          description: Introdueix el non de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
 
     legal-text-processor-reintegrate:
-      script: /home/marite/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py reintegrate SOME_SRC/legal-texts/{folder}/{yaml}
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py reintegrate SOME_SRC/legal-texts/{folder}/{yaml}
       title: Reintegrar traduccions
       description: >
         Una vegada fetes les traduccions aquest script regenera els fitxer md corresponent a la traducció utilitzant la plantilla de paragraphs.
@@ -45,10 +45,10 @@ legaltexts:
         yaml:
           description: Introdueix el nom del fitxer yaml a processar.
         folder:
-          description: Introdueix el non de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
+          description: Introdueix el nom de la carpeta on es guardarà el fitxer md. Aquesta carpeta ha de existir en el repositori!!.
 
     legal-text-processor-generate:
-      script: /home/marite/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py generate SOME_SRC/legal-texts/{input_dir} --output-prefix={output-prefix} --target-type={target-type} {with-toc}
+      script: /home/somenergia/.pyenv/versions/3.11.7/bin/python SOME_SRC/legal-texts/legaltexts/cli.py generate SOME_SRC/legal-texts/{input_dir} --output-prefix={output-prefix} --target-type={target-type} {with-toc}
       title: Generar documents de sortida
       description: >
         Genera els documents de sortida en pdf o html en el directory 'output' per a totes les traduccions presents (fitxers {language}.yaml) en la carpeta del document.
